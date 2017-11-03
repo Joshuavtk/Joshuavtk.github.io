@@ -1,0 +1,28 @@
+//variables
+$text-color: #f9f9f9
+$main-color: rgba(75, 75, 75, 0.8)
+$main--color-selected: rgba(90, 90, 90, 0.8)
+$background-color: #272727
+$secondary-color: #e50914
+$title-font: "Lato", "Roboto", sans-serif
+$main-font: "Roboto", sans-serif
+
+//computer widths
+$max-width: '1200px'
+$medium-width: '992px'
+$min-width: '768px'
+
+//importing main files
+@import "reset"
+@import "body"
+@import "header"
+@import "article"
+@import "popup"
+@import "footer"
+
+//screen sizes
+@media screen and (min-width: $min-width)
+  @import "desktop"
+
+@media screen and (max-width: 767px)
+  @import "mobile"

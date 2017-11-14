@@ -43,11 +43,14 @@
                     <p class="content__col col--num-3">
                         Ik vind back-end het leukst om mee te werken maar ik ben ook goed in front-end.
                         <br> Mijn specialiteit is PHP.
-                        <br> Ik ben ook zeer gemotiveerd, ik ben bijvoorbeeld nu in mijn vrije tijd bezig met Laravel.
+                        <br> Ik ben ook zeer gemotiveerd, ik ben bijvoorbeeld nu in mijn vrije tijd bezig met Laravel en Python.
                         <br>
                     </p>
                 </div>
-                <img src="images/schoolfoto.jpg" class="introduction__image" alt="schoolfoto">
+                <picture class="introduction__image">
+                    <source type="image/webp" srcset="images/schoolfoto.webp">
+                    <img src="images/schoolfoto.jpg" alt="schoolfoto" class="introduction__image">
+                </picture>
             </div>
         </div>
 
@@ -62,7 +65,10 @@
                 <img src="images/Fanstille-small.PNG" class="article__image image--from-fanstille" alt="Fanstille logo">
             </article>
             <div id="content_fanstille" class="popup">
-                <img src="images/Fanstille-large.PNG" alt="website preview Fanstille">
+                <picture>
+                    <source type="image/webp" srcset="images/Fanstille-large.webp">
+                    <img src="images/Fanstille-large.PNG" alt="website preview Fanstille">
+                </picture>
                 <div class="popup__text">
                     <p>Eindproject "MyBand" periode 1.4.
                         <br> De opdracht was een fan site maken van jouw favoriete band en zoveel mogelijk functionaliteit toevoegen.
@@ -82,7 +88,10 @@
                 <img src="images/MaanRoosVis-small.PNG" class="article__image image--from-maanroosvis" alt="MaanRoosVis logo">
             </article>
             <div id="content_maanroosvis" class="popup">
-                <img src="images/MaanRoosVis-large.PNG" alt="website preview MaanRoosVis">
+                <picture>
+                    <source type="image/webp" srcset="images/MaanRoosVis-large.webp">
+                    <img src="images/MaanRoosVis-large.PNG" alt="website preview MaanRoosVis">
+                </picture>
                 <div class="popup__text">
                     <p>Eindproject "The Wall" periode 1.3.
                         <br> Dit project is in samenwerking met Rick Hinfelaar gemaakt. De opdracht was een muur maken van foto's
@@ -104,7 +113,10 @@
                 <img src="images/FotoGallerij-small.PNG" class="article__image image--from-fotogallerij" alt="Fotogallerij image">
             </article>
             <div id="content_fotogallerij" class="popup">
-                <img src="images/FotoGallerij-large.PNG" alt="website preview Fotogallerij">
+                <picture>
+                    <source type="image/webp" srcset="images/FotoGallerij-large.webp">
+                    <img src="images/FotoGallerij-large.PNG" alt="website preview Fotogallerij">
+                </picture>
                 <div class="popup__text">
                     <p>Front-end opdracht 9 periode 1.2.
                         <br> De opdracht was een gallerij maken waar je een lijst met thumbnails ziet en als je op een van de
@@ -123,7 +135,10 @@
                 <img src="images/HalloWereld-small.png" class="article__image image--from-hallowereld" alt="Hallo wereld">
             </article>
             <div id="content_hallowereld" class="popup">
-                <img src="images/HalloWereld-large.PNG" alt="website preview Hallo wereld">
+                <picture>
+                    <source type="image/webp" srcset="images/HalloWereld-large.webp">
+                    <img src="images/HalloWereld-large.PNG" alt="website preview Hallo wereld">
+                </picture>
                 <div class="popup__text">
                     <p>Front-end opdracht 4 periode 1.1.
                         <br> De opdracht was om een website over jezelf te maken. Ik heb gekozen om deze opdracht bij mijn portfolio
@@ -137,37 +152,56 @@
         </div>
 
         <!-- Skills -->
-        <h1 class="main__title">Skills</h1>
         <div class="skills">
             <div class="skills__left">
-                <h1>Mijn Skills</h1>
+                <h1 class="main__title">Mijn Skills</h1>
                 <table class="skills__table">
                     <tr>
-                        <td class="skills__table_td td--type-text">Html5</td>
+                        <td class="skills__table_td td--type-text">HTML5</td>
                         <td class="skills__table_td td--type-stars">★★★★☆</td>
                     </tr>
                     <tr>
-                        <td class="skills__table_td td--type-text">Css</td>
+                        <td class="skills__table_td td--type-text">CSS3</td>
                         <td class="skills__table_td td--type-stars">★★★★☆</td>
+                    </tr>
+                    <tr>
+                        <td class="skills__table_td td--type-text">SASS/SCSS</td>
+                        <td class="skills__table_td td--type-stars">★★★☆☆</td>
+                    </tr>
+                    <tr>
+                        <td class="skills__table_td td--type-text">JavaScript</td>
+                        <td class="skills__table_td td--type-stars">★★★☆☆</td>
                     </tr>
                     <tr>
                         <td class="skills__table_td td--type-text">PHP</td>
+                        <td class="skills__table_td td--type-stars">★★★★★</td>
+                    </tr>
+                    <tr>
+                        <td class="skills__table_td td--type-text">MySQL</td>
                         <td class="skills__table_td td--type-stars">★★★★☆</td>
                     </tr>
                     <tr>
-                        <td class="skills__table_td td--type-text">Javascript</td>
-                        <td class="skills__table_td td--type-stars">★★★★☆</td>
+                        <td class="skills__table_td td--type-text">Java</td>
+                        <td class="skills__table_td td--type-stars">★★☆☆☆</td>
                     </tr>
                     <tr>
-                        <td class="skills__table_td td--type-text">...</td>
-                        <td class="skills__table_td td--type-stars">★★★★☆</td>
+                        <td class="skills__table_td td--type-text">Laravel</td>
+                        <td class="skills__table_td td--type-stars">★★☆☆☆</td>
+                    </tr>
+                    <tr>
+                        <td class="skills__table_td td--type-text">Python</td>
+                        <td class="skills__table_td td--type-stars">★☆☆☆☆</td>
                     </tr>
                 </table>
             </div>
             <div class="skills__right">
-                <a href="Curriculum Vitae.pdf" target="__blank" class="skills__button link--selected-none">
-                    <h1>Mijn CV</h1>
-                    <img src="images/clip-icon.png" alt="Clip icon">
+                <h1 class="main__title">Mijn CV</h1>
+                <div class="skills__buttons">
+                    <a href="Curriculum Vitae.pdf" target="__blank" class="skills__button link--selected-none">
+                        Klik hier om naar mijn CV te gaan
+                    </a>
+                </div>
+              
                 </a>
             </div>
         </div>

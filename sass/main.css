@@ -18,6 +18,16 @@ a {
   color: inherit;
 }
 
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 main {
   margin: auto 0;
 }
@@ -36,14 +46,15 @@ main .wrapper {
 
 body {
   background-color: #272727;
-  color: #f9f9f9;
+  color: #eeeeee;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: sans-serif;
 }
 
 .introduction__content {
-  line-height: 20px;
+  line-height: 1.4;
 }
 
 .header {
@@ -100,7 +111,7 @@ body {
 }
 
 .article__image {
-  min-width: 100%;
+  width: 100%;
 }
 
 .article:hover {
@@ -116,10 +127,8 @@ body {
   flex: 0 1 auto;
 }
 
-.popup img {
+.popup img, .popup picture {
   max-width: 650px;
-  width: 100%;
-  height: 100%;
 }
 
 .popup__text {
@@ -175,6 +184,74 @@ body {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1150px) {
+  .popup img, .popup picture {
+    max-width: 550px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .popup img, .popup picture {
+    max-width: 450px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .popup {
+    display: block;
+  }
+}
+
+.skills {
+  display: flex;
+}
+
+.skills__left {
+  margin-bottom: 2em;
+}
+
+.skills__right {
+  margin: auto;
+  padding-bottom: 2em;
+}
+
+.skills__table {
+  border-collapse: collapse;
+}
+
+.skills__table .td--type-text {
+  width: 80%;
+  font-size: 18px;
+}
+
+.skills__table .td--type-stars {
+  width: 20%;
+  font-size: 135%;
+}
+
+.skills__table tr {
+  border-bottom: #e50914 1px solid;
+}
+
+.skills__button {
+  line-height: 25px;
+  background-color: rgba(75, 75, 75, 0.8);
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-color: rgba(75, 75, 75, 0.8);
+  display: inline-block;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.skills__button:hover {
+  background-color: rgba(90, 90, 90, 0.8);
+}
+
 footer {
   text-align: center;
   padding: 20px 0;
@@ -191,6 +268,12 @@ footer .footer__image {
   .article {
     margin: 15px;
     padding: 15px;
+  }
+  .skills__table {
+    margin: 15px;
+  }
+  .skills__buttons {
+    margin: 15px;
   }
   .header {
     padding: 10vh 0;
@@ -244,10 +327,10 @@ footer .footer__image {
     width: 41.7%;
   }
   main .image--from-fanstille {
-    padding: 25px 0;
+    padding: 25.5px 0;
   }
   main .image--from-hallowereld {
-    padding: 27px 0;
+    padding: 33.5px 0;
   }
 }
 
@@ -259,10 +342,10 @@ footer .footer__image {
     width: 43.5%;
   }
   main .image--from-fanstille {
-    padding: 34.5px 0;
+    padding: 35px 0;
   }
   main .image--from-hallowereld {
-    padding: 36.5px 0;
+    padding: 45px 0;
   }
 }
 
@@ -277,7 +360,7 @@ footer .footer__image {
     padding: 43px 0;
   }
   main .image--from-hallowereld {
-    padding: 45px 0;
+    padding: 55.5px 0;
   }
 }
 
@@ -286,6 +369,12 @@ footer .footer__image {
     padding: 10px;
     margin: 10px;
     width: 90%;
+  }
+  .skills__table {
+    margin: 10px;
+  }
+  .skills__buttons {
+    margin: 10px;
   }
   .introduction {
     margin: 10px;
@@ -329,6 +418,9 @@ footer .footer__image {
   }
   .content__spacer {
     display: none;
+  }
+  .skills {
+    display: block;
   }
 }
 

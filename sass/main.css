@@ -32,6 +32,10 @@ main {
   margin: auto 0;
 }
 
+main ::selection {
+  background-color: #e50914;
+}
+
 main .main__title {
   display: inline-block;
   border-bottom: #e50914 1px solid;
@@ -80,6 +84,10 @@ body {
 
 .header .title--line-break {
   display: none;
+}
+
+.header ::selection {
+  background-color: rgba(90, 90, 90, 0.8);
 }
 
 .article {
@@ -151,7 +159,7 @@ body {
   height: 100%;
 }
 
-.modaal-window {
+.popup-window {
   display: block;
   width: 80%;
   background-color: #414141;
@@ -159,6 +167,10 @@ body {
   box-sizing: border-box;
   position: fixed;
   animation: grow 0.5s forwards;
+}
+
+.popup-window ::selection {
+  background-color: #e50914;
 }
 
 @keyframes grow {
@@ -262,6 +274,10 @@ footer .footer__image {
   width: 50px;
   height: 50px;
   margin: 5px;
+}
+
+footer ::selection {
+  background-color: rgba(90, 90, 90, 0.8);
 }
 
 @media screen and (min-width: 768px) {

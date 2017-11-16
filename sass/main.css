@@ -409,14 +409,14 @@ footer ::selection {
     height: 250px;
     box-shadow: 2px 2px #e50914;
   }
-  .modaal-window {
+  .popup-window {
     display: block;
     width: 100%;
     padding: 0;
     animation: grow 0.5s forwards;
     text-align: center;
   }
-  .modaal-window p {
+  .popup-window p {
     text-align: left;
   }
   .popup {

@@ -6,9 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="theme-color" content="#e50914">
 
     <!-- x-icon -->
-    <link rel="shortcut icon" href="images/Portfolio_foto.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/compiled/Portfolio_x-icon.webp" type="image/x-icon">
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="sass/main.css" type="text/css">
@@ -32,6 +34,7 @@
                 <div>
                     <p class="content__col col--num-1">
                         Hallo ik ben Joshua van 't Kruis, 17 jaar oud en volg Media development op het Mediacollege Amsterdam.
+                        <br> Ik aspireer om een Fullstack Developer te worden.
                         <br>
                     </p>
                     <span class="content__spacer"></span>
@@ -48,7 +51,7 @@
                     </p>
                 </div>
                 <picture>
-                    <source type="image/webp" srcset="images/Portfolio_foto.webp">
+                    <source type="image/webp" srcset="images/compiled/Portfolio_foto.webp">
                     <img src="images/Portfolio_foto.jpg" alt="Portfolio foto" class="introduction__image">
                 </picture>
             </div>
@@ -66,14 +69,22 @@
             </article>
             <div id="content_fanstille" class="popup">
                 <picture>
-                    <source type="image/webp" srcset="images/Fanstille-large.webp">
+                    <source type="image/webp" srcset="images/compiled/Fanstille-large.webp">
                     <img src="images/Fanstille-large.PNG" alt="website preview Fanstille">
                 </picture>
                 <div class="popup__text">
                     <p>Eindproject "MyBand" periode 1.4.
                         <br> De opdracht was een fan site maken van jouw favoriete band en zoveel mogelijk functionaliteit toevoegen.
                         <br> Mijn website heeft ook de mogelijkheid om een reactie achter te kunnen laten onder een artikel en
-                        die van anderen te kunnen bekijken.</p>
+                        die van anderen te kunnen bekijken.
+                    </p>
+                    <div class="popup__code_lang">
+                        <h3>Coding languages used:</h3>
+                        <span class="lang--php">PHP</span>
+                        <span class="lang--html5">HTML5</span>
+                        <span class="lang--sass">SASS / SCSS</span>
+                        <span class="lang--smarty">Smarty</span>
+                    </div>
                     <div class="popup__buttons">
                         <a href="https://github.com/Joshuavtk/Fanstille_complete" class="article__button link--selected-none" target="_blank">Github link</a>
                         <a href="http://22288.hosts.ma-cloud.nl/bewijzenmap/p1.4/proj/Fanstille/" class="article__button link--selected-none" target="_blank">Bekijk online</a>
@@ -89,7 +100,7 @@
             </article>
             <div id="content_maanroosvis" class="popup">
                 <picture>
-                    <source type="image/webp" srcset="images/MaanRoosVis-large.webp">
+                    <source type="image/webp" srcset="images/compiled/MaanRoosVis-large.webp">
                     <img src="images/MaanRoosVis-large.PNG" alt="website preview MaanRoosVis">
                 </picture>
                 <div class="popup__text">
@@ -114,7 +125,7 @@
             </article>
             <div id="content_fotogallerij" class="popup">
                 <picture>
-                    <source type="image/webp" srcset="images/FotoGallerij-large.webp">
+                    <source type="image/webp" srcset="images/compiled/FotoGallerij-large.webp">
                     <img src="images/FotoGallerij-large.PNG" alt="website preview Fotogallerij">
                 </picture>
                 <div class="popup__text">
@@ -136,7 +147,7 @@
             </article>
             <div id="content_hallowereld" class="popup">
                 <picture>
-                    <source type="image/webp" srcset="images/HalloWereld-large.webp">
+                    <source type="image/webp" srcset="images/compiled/HalloWereld-large.webp">
                     <img src="images/HalloWereld-large.PNG" alt="website preview Hallo wereld">
                 </picture>
                 <div class="popup__text">
@@ -154,24 +165,34 @@
         <!-- Skills -->
         <div class="skills">
             <div class="skills__left">
-                <h1 class="main__title">Mijn Skills</h1>
+                <h1 class="main__title">Front-end Skills</h1>
                 <table class="skills__table">
                     <tr>
                         <td class="skills__table_td td--type-text">HTML5</td>
-                        <td class="skills__table_td td--type-stars">★★★★☆</td>
+                        <td class="skills__table_td td--type-stars">★★★★★</td>
                     </tr>
                     <tr>
                         <td class="skills__table_td td--type-text">CSS3</td>
                         <td class="skills__table_td td--type-stars">★★★★☆</td>
                     </tr>
                     <tr>
-                        <td class="skills__table_td td--type-text">SASS/SCSS</td>
-                        <td class="skills__table_td td--type-stars">★★★☆☆</td>
+                        <td class="skills__table_td td--type-text">SASS / SCSS</td>
+                        <td class="skills__table_td td--type-stars">★★★★☆</td>
                     </tr>
                     <tr>
                         <td class="skills__table_td td--type-text">JavaScript</td>
-                        <td class="skills__table_td td--type-stars">★★★☆☆</td>
+                        <td class="skills__table_td td--type-stars">★★★★☆</td>
                     </tr>
+                    <tr>
+                        <td class="skills__table_td td--type-text">React.js</td>
+                        <td class="skills__table_td td--type-stars">★☆☆☆☆</td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="skills__right">
+                <h1 class="main__title">Back-end Skills</h1>
+                <table class="skills__table">
                     <tr>
                         <td class="skills__table_td td--type-text">PHP</td>
                         <td class="skills__table_td td--type-stars">★★★★★</td>
@@ -185,6 +206,10 @@
                         <td class="skills__table_td td--type-stars">★★☆☆☆</td>
                     </tr>
                     <tr>
+                        <td class="skills__table_td td--type-text">Node.js</td>
+                        <td class="skills__table_td td--type-stars">★★☆☆☆</td>
+                    </tr>
+                    <tr>
                         <td class="skills__table_td td--type-text">Laravel</td>
                         <td class="skills__table_td td--type-stars">★★☆☆☆</td>
                     </tr>
@@ -194,15 +219,14 @@
                     </tr>
                 </table>
             </div>
-            <div class="skills__right">
+            <!-- CV -->
+            <div class="main__cv">
                 <h1 class="main__title">Mijn CV</h1>
                 <div class="skills__buttons">
                     <a href="Curriculum Vitae.pdf" target="__blank" class="skills__button link--selected-none">
                         Klik hier om naar mijn CV te gaan
                     </a>
                 </div>
-              
-                </a>
             </div>
         </div>
 
@@ -211,16 +235,16 @@
     <footer>
         <p>Copyright © 2017 Joshua van 't Kruis All Rights Reserved. </p>
         <a href="mailto:joshuavtk@hotmail.com">
-            <img src="images/email-logo.png" alt="Email image" class="footer__image">
+            <img src="images/compiled/email-logo.png" alt="Email image" class="footer__image">
         </a>
         <a href="tel:0611423394">
-            <img src="images/phone-logo.png" alt="phone image" class="footer__image">
+            <img src="images/compiled/phone-logo.png" alt="phone image" class="footer__image">
         </a>
         <a href="https://www.linkedin.com/in/joshua-van-t-kruis/" target="_blank">
-            <img src="images/linkedin-logo.png" alt="LinkedIn image" class="footer__image">
+            <img src="images/compiled/linkedin-logo.png" alt="LinkedIn image" class="footer__image">
         </a>
         <a href="https://github.com/Joshuavtk" target="_blank">
-            <img src="images/github-logo.png" alt="github image" class="footer__image">
+            <img src="images/compiled/github-logo.png" alt="github image" class="footer__image">
         </a>
     </footer>
 </body>

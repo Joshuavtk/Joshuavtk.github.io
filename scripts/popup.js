@@ -12,8 +12,6 @@ const popup = (function () {
     popupWindow.addEventListener('click', function (e) {
         e.stopPropagation();
     });
-    const popupContent = document.createElement('div');
-    popupContent.className = 'popup-content';
 
     return {
         center: function () {
@@ -23,8 +21,7 @@ const popup = (function () {
             popupWindow.style.left = left + 'px';
         },
         open: function (parameter) {
-            popupContent.appendChild(parameter);
-            popupWindow.appendChild(popupContent);
+            popupWindow.appendChild(parameter);
             popupWindow.appendChild(exitButton);
 
             grayBackground.className = 'gray-background';
@@ -33,7 +30,6 @@ const popup = (function () {
             window.addEventListener('resize', popup.center(), true);
         },
         close: function () {
-            popupContent.innerHTML = '';
             popupWindow.innerHTML = '';
             grayBackground.removeChild(popupWindow);
             grayBackground.className = '';

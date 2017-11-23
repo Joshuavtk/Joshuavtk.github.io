@@ -58,7 +58,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
 }
 
 .introduction__content {
@@ -73,7 +72,6 @@ body {
 }
 
 .header__title {
-  font-family: sans-serif;
   text-align: center;
 }
 
@@ -104,22 +102,17 @@ body {
 .article__button {
   line-height: 25px;
   background-color: #272727;
-  color: #fff;
   font-weight: 400;
   text-transform: uppercase;
   padding: 5px 10px;
-  border-color: #272727;
   display: inline-block;
   font-size: 12px;
   margin: 5px 0;
+  box-shadow: 2px 2px #e50914;
 }
 
 .article__button:hover {
-  background-color: rgba(75, 75, 75, 0.8);
-}
-
-.article__title {
-  font-family: sans-serif;
+  background-color: #F44336;
 }
 
 .article__image {
@@ -150,8 +143,22 @@ body {
 }
 
 .popup__buttons {
-  text-align: center;
+  text-align: left;
   margin: 5px 0;
+}
+
+.popup__code_lang {
+  padding: 5px 0;
+}
+
+.popup__code_lang .code--lang {
+  line-height: 25px;
+  background-color: rgba(75, 75, 75, 0.8);
+  font-weight: 400;
+  padding: 5px 10px;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
 .gray-background {
@@ -189,14 +196,14 @@ body {
 }
 
 .exit-button {
-  font-size: 3em;
+  font-size: 4em;
   position: absolute;
-  top: .5em;
-  right: 1em;
+  top: 10px;
+  right: 35px;
 }
 
 .exit-button:hover {
-  color: #e50914;
+  color: #F44336;
   cursor: pointer;
 }
 
@@ -254,11 +261,9 @@ body {
 .skills__button {
   line-height: 25px;
   background-color: rgba(75, 75, 75, 0.8);
-  color: #fff;
   font-weight: 400;
   text-transform: uppercase;
   padding: 5px 10px;
-  border-color: rgba(75, 75, 75, 0.8);
   display: inline-block;
   font-size: 14px;
   margin: 5px 0;
@@ -387,8 +392,9 @@ footer ::selection {
 @media screen and (max-width: 767px) {
   .article {
     padding: 10px;
-    margin: 10px;
-    width: 90%;
+    margin: 15px auto;
+    width: 88%;
+    display: block;
   }
   .skills__table {
     margin: 10px;
@@ -406,6 +412,13 @@ footer ::selection {
   .introduction__content p {
     width: 100%;
     text-align: left;
+    border-bottom: 1px #e50914 solid;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+  .introduction__content .col--num-3 {
+    border: none;
+    margin-bottom: 0px;
   }
   .introduction__image {
     margin: 10px auto 0;
@@ -423,6 +436,13 @@ footer ::selection {
   .popup-window p {
     text-align: left;
   }
+  .exit-button {
+    font-size: 3.5em;
+    top: unset;
+    bottom: 10px;
+    line-height: 0.8em;
+    right: 15px;
+  }
   .popup {
     display: block;
   }
@@ -430,11 +450,6 @@ footer ::selection {
     padding: 0 1em;
     font-size: 110%;
     margin: auto 0;
-  }
-  .exit-button {
-    font-size: 4em;
-    position: static;
-    padding: 10px;
   }
   .content__spacer {
     display: none;

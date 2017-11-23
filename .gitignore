@@ -53,3 +53,5 @@ Temporary Items
 #Compiled sass files
 *.css.map
 _*.css
+
+*.exe

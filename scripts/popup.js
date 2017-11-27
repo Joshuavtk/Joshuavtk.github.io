@@ -30,9 +30,13 @@ const popup = (function () {
             window.addEventListener('resize', popup.center(), true);
         },
         close: function () {
-            popupWindow.innerHTML = '';
-            grayBackground.removeChild(popupWindow);
-            grayBackground.className = '';
+            function closeFinisher() {
+                popupWindow.innerHTML = '';
+                grayBackground.removeChild(popupWindow);
+                grayBackground.className = '';
+            };
+            grayBackground.className += ' zoomOut';
+            setTimeout(closeFinisher, 300);
         }
     }
 }());

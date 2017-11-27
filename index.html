@@ -61,6 +61,35 @@
         <h1 class="main__title">Projecten</h1>
         <div class="wrapper">
 
+            <!-- Chess Game -->
+            <article class="article" id="article_chessgame">
+                <h2 class="article__title title--size-big">Chess Game</h2>
+                <h4 class="article__title title--size-medium">Eindopdracht ECMAScript 6 - November 2017</h4>
+                <img src="images/Fanstille-small.PNG" class="article__image image--from-fanstille" alt="Fanstille logo">
+            </article>
+            <div id="content_chessgame" class="popup">
+                <picture>
+                    <source type="image/webp" srcset="images/compiled/Fanstille-large.webp">
+                    <img src="images/Fanstille-large.PNG" alt="website preview Fanstille">
+                </picture>
+                <div class="popup__text">
+                    <p>
+                        De opdracht was een fan site maken van jouw favoriete band en zoveel mogelijk functionaliteit toevoegen.
+                        <br> Mijn website heeft onder andere de mogelijkheid om een reactie achter te kunnen laten.
+                    </p>
+                    <div class="popup__code_lang">
+                        <span class="code--lang lang-php">PHP</span>
+                        <span class="code--lang lang-mysql">MySQL</span>
+                        <span class="code--lang lang-sass">SASS / SCSS</span>
+                        <span class="code--lang lang-smarty">Smarty</span>
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="https://github.com/Joshuavtk/Fanstille_complete" class="article__button link--selected-none" target="_blank">Github link</a>
+                        <a href="http://22288.hosts.ma-cloud.nl/bewijzenmap/p1.4/proj/Fanstille/" class="article__button link--selected-none" target="_blank">Bekijk online</a>
+                    </div>
+                </div>
+            </div>
+
             <!-- Fanstille -->
             <article class="article" id="article_fanstille">
                 <h2 class="article__title title--size-big">Fanstille</h2>
@@ -103,8 +132,8 @@
                 </picture>
                 <div class="popup__text">
                     <p>
-                        Dit project is in samenwerking met Rick Hinfelaar gemaakt. De opdracht was een muur maken van foto's
-                        waarbij gebruikers hun eigen foto's toe konden voegen.
+                        Dit project is in samenwerking met Rick Hinfelaar gemaakt. De opdracht was een muur maken van foto's waarbij gebruikers hun
+                        eigen foto's toe konden voegen.
                         <br> Bij dit spel zoek je 1 van de 6 plaatjes die met dezelfde letter begint als je letter die je gekregen
                         hebt.
                     </p>
@@ -134,13 +163,13 @@
                 </picture>
                 <div class="popup__text">
                     <p>
-                        De opdracht was een gallerij maken waar je een lijst met thumbnails ziet en als je op een van de
-                        thumbnails klikt, de foto vergroot word.</p>
-                        <div class="popup__code_lang">
-                            <span class="code--lang lang-html5">HTML5</span>
-                            <span class="code--lang lang-css3">CSS3</span>
-                            <span class="code--lang lang-javascript">JavaScript</span>
-                        </div>
+                        De opdracht was een gallerij maken waar je een lijst met thumbnails ziet en als je op een van de thumbnails klikt, de foto
+                        vergroot word.</p>
+                    <div class="popup__code_lang">
+                        <span class="code--lang lang-html5">HTML5</span>
+                        <span class="code--lang lang-css3">CSS3</span>
+                        <span class="code--lang lang-javascript">JavaScript</span>
+                    </div>
                     <div class="popup__buttons">
                         <a href="https://github.com/Joshuavtk/Gallerij-opdracht" class="article__button link--selected-none" target="_blank">Github link</a>
                         <a href="http://22288.hosts.ma-cloud.nl/bewijzenmap/p1.2/fro/opdracht9/" class="article__button link--selected-none" target="_blank">Bekijk online</a>
@@ -161,8 +190,8 @@
                 </picture>
                 <div class="popup__text">
                     <p>
-                        De opdracht was om een website over jezelf te maken. Ik heb gekozen om deze opdracht bij mijn portfolio
-                        te zetten omdat het laat zien hoeveel ik beter ben geworden in coderen in het laatste jaar.
+                        De opdracht was om een website over jezelf te maken. Ik heb gekozen om deze opdracht bij mijn portfolio te zetten omdat het
+                        laat zien hoeveel ik beter ben geworden in coderen in het laatste jaar.
                     </p>
                     <div class="popup__code_lang">
                         <span class="code--lang lang-html5">HTML5</span>
@@ -236,14 +265,14 @@
             <div class="main__cv">
                 <h1 class="main__title">Mijn CV</h1>
                 <div class="skills__buttons">
-                    <a href="Curriculum Vitae.pdf" target="__blank" class="skills__button link--selected-none">
+                    <a href="Curriculum%20Vitae.pdf" target="__blank" class="skills__button link--selected-none">
                         Klik hier om naar mijn CV te gaan
                     </a>
                 </div>
             </div>
         </div>
 
-        <script src="scripts/popup.js"></script>
+
     </main>
     <footer>
         <p>Copyright © 2017 Joshua van 't Kruis All Rights Reserved. </p>
@@ -260,6 +289,9 @@
             <img src="images/compiled/github-logo.png" alt="github image" class="footer__image">
         </a>
     </footer>
+
+    <!-- <script src="//code.jquery.com/jquery-1.10.2.min.js"></script> -->
+    <script src="scripts/popup.js"></script>
 </body>
 
 </html>

@@ -177,22 +177,38 @@ body {
   padding: 1em;
   box-sizing: border-box;
   position: fixed;
-  animation: grow 0.5s forwards;
+  animation: zoomIn 0.7s forwards;
 }
 
 .popup-window ::selection {
   background-color: #e50914;
 }
 
-@keyframes grow {
-  0% {
-    -webkit-transform: scale3d(0, 0, 0);
-    transform: scale3d(0, 0, 0);
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
   }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+  50% {
+    opacity: 1;
   }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut .popup-window {
+  animation: zoomOut 0.5s;
 }
 
 .exit-button {
@@ -430,7 +446,6 @@ footer ::selection {
     display: block;
     width: 100%;
     padding: 0;
-    animation: grow 0.5s forwards;
     text-align: center;
   }
   .popup-window p {

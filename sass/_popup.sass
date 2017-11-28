@@ -54,17 +54,29 @@
   padding: 1em
   box-sizing: border-box
   position: fixed
-  animation: grow 0.5s forwards
+  animation: zoomIn 0.7s forwards
   ::selection
     background-color: $secondary-color
 
-@keyframes grow
-  0%
-    -webkit-transform: scale3d(0, 0, 0)
-    transform: scale3d(0, 0, 0)
-  100%
-    -webkit-transform: scale3d(1, 1, 1)
-    transform: scale3d(1, 1, 1)
+@keyframes zoomIn
+  from
+    opacity: 0
+    transform: scale3d(.3, .3, .3)
+  50%
+    opacity: 1
+
+@keyframes zoomOut
+  from
+    opacity: 1
+  50%
+    opacity: 0
+    transform: scale3d(.3, .3, .3)
+  to 
+    opacity: 0
+
+.zoomOut
+  .popup-window
+    animation: zoomOut 0.5s
 
 .exit-button
   font-size: 4em

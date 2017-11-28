@@ -46,7 +46,7 @@ grayBackground.addEventListener('click', popup.close);
 exitButton.addEventListener('click', popup.close);
 
 // Array with popup articles
-const articles = ['fanstille', 'maanroosvis', 'fotogallerij', 'hallowereld'];
+const articles = ['chessgame', 'fanstille', 'maanroosvis', 'fotogallerij', 'hallowereld'];
 let buttons = [];
 let contents = [];
 for (let i = 0; i < articles.length; i++) {

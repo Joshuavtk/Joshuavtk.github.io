@@ -446,7 +446,6 @@ footer ::selection {
     display: block;
     width: 100%;
     padding: 0;
-    animation: grow 0.5s forwards;
     text-align: center;
   }
   .popup-window p {

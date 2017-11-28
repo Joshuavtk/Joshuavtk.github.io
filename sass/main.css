@@ -65,9 +65,9 @@ body {
 }
 
 .header {
+  padding: 10vh 0 0;
+  margin-bottom: 10em;
   background-color: red;
-  padding: 3em 0;
-  margin-bottom: 1em;
   width: 100%;
 }
 
@@ -77,10 +77,12 @@ body {
 
 .header .title--size-big {
   font-size: 55px;
+  text-shadow: 3px 3px black;
 }
 
 .header .title--size-medium {
   font-size: 30px;
+  text-shadow: 2px 2px black;
   margin-top: 0.3em;
 }
 
@@ -90,6 +92,21 @@ body {
 
 .header ::selection {
   background-color: rgba(255, 255, 255, 0.25);
+}
+
+.header__image {
+  text-align: center;
+  height: 1em;
+  background-color: white;
+  margin-top: 12em;
+}
+
+.header__image .image--type-png {
+  width: 300px;
+  height: 300px;
+  margin-top: -159px;
+  border-radius: 50%;
+  border: 1em white solid;
 }
 
 .article {
@@ -316,30 +333,11 @@ footer ::selection {
   .skills__buttons {
     margin: 15px;
   }
-  .header {
-    padding: 10vh 0 0;
-    margin-bottom: 10em;
-  }
   .header .title--size-big {
     font-size: 75px;
-    text-shadow: 3px 3px black;
   }
   .header .title--size-medium {
     font-size: 40px;
-    text-shadow: 2px 2px black;
-  }
-  .header__image {
-    text-align: center;
-    height: 1em;
-    background-color: white;
-    margin-top: 12em;
-  }
-  .header__image .image--type-png {
-    width: 300px;
-    height: 300px;
-    margin-top: -159px;
-    border-radius: 50%;
-    border: 1em white solid;
   }
   .introduction {
     margin: 15px 15px 2em;
@@ -379,8 +377,8 @@ footer ::selection {
   main .image--from-fanstille {
     padding: 17px 0;
   }
-  main .image--from-maanroosvis {
-    padding: 23px 0;
+  main .image--from-fotogallerij {
+    padding: 5.7px 0;
   }
 }
 
@@ -395,10 +393,13 @@ footer ::selection {
     padding: 21.5px 0;
   }
   main .image--from-hallowereld {
-    padding: 27.5px 0;
+    padding: 4px 0;
   }
   main .image--from-chessgame {
     padding: 7px 0;
+  }
+  main .image--from-fotogallerij {
+    padding: 0;
   }
 }
 
@@ -413,7 +414,7 @@ footer ::selection {
     padding: 27px 0;
   }
   main .image--from-hallowereld {
-    padding: 35px 0;
+    padding: 5px 0;
   }
   main .image--from-chessgame {
     padding: 9px 0;
@@ -454,11 +455,16 @@ footer ::selection {
     border: none;
     margin-bottom: 0px;
   }
+  .header {
+    margin-bottom: 9em;
+  }
+  .header__image {
+    margin-top: 10em;
+  }
   .header__image .image--type-png {
-    margin: 10px auto 0;
     width: 250px;
     height: 250px;
-    box-shadow: 2px 2px red;
+    margin-top: -134px;
   }
   .popup-window {
     display: block;

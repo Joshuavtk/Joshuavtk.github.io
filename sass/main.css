@@ -37,12 +37,12 @@ main {
 }
 
 main ::selection {
-  background-color: #e50914;
+  background-color: red;
 }
 
 main .main__title {
   display: inline-block;
-  border-bottom: #e50914 1px solid;
+  border-bottom: red 1px solid;
   margin-left: 10px;
   font-weight: normal;
 }
@@ -53,7 +53,7 @@ main .wrapper {
 }
 
 body {
-  background-color: #272727;
+  background-color: #131313;
   color: #eeeeee;
   min-height: 100vh;
   display: flex;
@@ -65,7 +65,7 @@ body {
 }
 
 .header {
-  background-color: #e50914;
+  background-color: red;
   padding: 3em 0;
   margin-bottom: 1em;
   width: 100%;
@@ -89,26 +89,26 @@ body {
 }
 
 .header ::selection {
-  background-color: rgba(90, 90, 90, 0.8);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .article {
-  background-color: rgba(75, 75, 75, 0.8);
-  box-shadow: 2px 2px #e50914;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 2px 2px red;
   flex: 1 1 70%;
   padding: 1em;
 }
 
 .article__button {
   line-height: 25px;
-  background-color: #272727;
+  background-color: #131313;
   font-weight: 400;
   text-transform: uppercase;
   padding: 5px 10px;
   display: inline-block;
   font-size: 12px;
   margin: 5px 0;
-  box-shadow: 2px 2px #e50914;
+  box-shadow: 2px 2px red;
 }
 
 .article__button:hover {
@@ -120,7 +120,7 @@ body {
 }
 
 .article:hover {
-  background-color: rgba(90, 90, 90, 0.8);
+  background-color: rgba(255, 255, 255, 0.25);
   cursor: pointer;
 }
 
@@ -153,7 +153,7 @@ body {
 
 .popup__code_lang .code--lang {
   line-height: 25px;
-  background-color: rgba(75, 75, 75, 0.8);
+  background-color: rgba(255, 255, 255, 0.15);
   font-weight: 400;
   padding: 5px 10px;
   display: inline-block;
@@ -181,7 +181,7 @@ body {
 }
 
 .popup-window ::selection {
-  background-color: #e50914;
+  background-color: red;
 }
 
 @keyframes zoomIn {
@@ -271,12 +271,12 @@ body {
 }
 
 .skills__table tr {
-  border-bottom: #e50914 1px solid;
+  border-bottom: red 1px solid;
 }
 
 .skills__button {
   line-height: 25px;
-  background-color: rgba(75, 75, 75, 0.8);
+  background-color: rgba(255, 255, 255, 0.15);
   font-weight: 400;
   text-transform: uppercase;
   padding: 5px 10px;
@@ -286,13 +286,13 @@ body {
 }
 
 .skills__button:hover {
-  background-color: rgba(90, 90, 90, 0.8);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 footer {
   text-align: center;
   padding: 20px 0;
-  background-color: #e50914;
+  background-color: red;
 }
 
 footer .footer__image {
@@ -302,7 +302,7 @@ footer .footer__image {
 }
 
 footer ::selection {
-  background-color: rgba(90, 90, 90, 0.8);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 @media screen and (min-width: 768px) {
@@ -317,14 +317,29 @@ footer ::selection {
     margin: 15px;
   }
   .header {
-    padding: 10vh 0;
-    margin-bottom: 2em;
+    padding: 10vh 0 0;
+    margin-bottom: 10em;
   }
   .header .title--size-big {
     font-size: 75px;
+    text-shadow: 3px 3px black;
   }
   .header .title--size-medium {
     font-size: 40px;
+    text-shadow: 2px 2px black;
+  }
+  .header__image {
+    text-align: center;
+    height: 1em;
+    background-color: white;
+    margin-top: 12em;
+  }
+  .header__image .image--type-png {
+    width: 300px;
+    height: 300px;
+    margin-top: -159px;
+    border-radius: 50%;
+    border: 1em white solid;
   }
   .introduction {
     margin: 15px 15px 2em;
@@ -336,21 +351,15 @@ footer ::selection {
   .introduction__content .content__spacer {
     float: left;
     height: 100%;
-    background-color: #e50914;
+    background-color: red;
     width: 1px;
     margin: 0 10px;
     display: block;
   }
   .introduction__content .content__col {
-    width: 30%;
+    width: 31.3%;
     height: 100%;
     float: left;
-  }
-  .introduction__image {
-    width: 250px !important;
-    height: 250px !important;
-    box-shadow: 2px 2px #e50914;
-    float: right;
   }
   main {
     margin: auto;
@@ -368,10 +377,10 @@ footer ::selection {
     width: 41.7%;
   }
   main .image--from-fanstille {
-    padding: 25.5px 0;
+    padding: 17px 0;
   }
-  main .image--from-hallowereld {
-    padding: 33.5px 0;
+  main .image--from-maanroosvis {
+    padding: 23px 0;
   }
 }
 
@@ -380,13 +389,16 @@ footer ::selection {
     width: 970px;
   }
   main .article {
-    width: 43.5%;
+    width: 26.8%;
   }
   main .image--from-fanstille {
-    padding: 35px 0;
+    padding: 21.5px 0;
   }
   main .image--from-hallowereld {
-    padding: 45px 0;
+    padding: 27.5px 0;
+  }
+  main .image--from-chessgame {
+    padding: 7px 0;
   }
 }
 
@@ -395,13 +407,19 @@ footer ::selection {
     width: 1170px;
   }
   main .article {
-    width: 44.6%;
+    width: 27.9%;
   }
   main .image--from-fanstille {
-    padding: 43px 0;
+    padding: 27px 0;
   }
   main .image--from-hallowereld {
-    padding: 55.5px 0;
+    padding: 35px 0;
+  }
+  main .image--from-chessgame {
+    padding: 9px 0;
+  }
+  main .introduction__content .content__col {
+    width: 32.1%;
   }
 }
 
@@ -428,7 +446,7 @@ footer ::selection {
   .introduction__content p {
     width: 100%;
     text-align: left;
-    border-bottom: 1px #e50914 solid;
+    border-bottom: 1px red solid;
     margin-bottom: 5px;
     padding-bottom: 5px;
   }
@@ -436,11 +454,11 @@ footer ::selection {
     border: none;
     margin-bottom: 0px;
   }
-  .introduction__image {
+  .header__image .image--type-png {
     margin: 10px auto 0;
     width: 250px;
     height: 250px;
-    box-shadow: 2px 2px #e50914;
+    box-shadow: 2px 2px red;
   }
   .popup-window {
     display: block;
@@ -448,7 +466,7 @@ footer ::selection {
     padding: 0;
     text-align: center;
   }
-  .popup-window p {
+  .popup-window p, .popup-window h3 {
     text-align: left;
   }
   .exit-button {

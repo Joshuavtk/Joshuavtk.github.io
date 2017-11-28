@@ -27,6 +27,12 @@
         <h1 class="header__title title--size-big">Joshua
             <br class="title--line-break"> van 't Kruis</h1>
         <h3 class="header__title title--size-medium">Media developer</h3>
+        <div class="header__image">
+            <picture>
+                <source type="image/webp" srcset="images/compiled/Portfolio_foto.webp">
+                <img src="images/Portfolio_foto.jpg" alt="Portfolio foto" class="image--type-png">
+            </picture>
+        </div>
     </header>
     <main>
         <!-- About me -->
@@ -52,10 +58,7 @@
                         <br>
                     </p>
                 </div>
-                <picture>
-                    <source type="image/webp" srcset="images/compiled/Portfolio_foto.webp">
-                    <img src="images/Portfolio_foto.jpg" alt="Portfolio foto" class="introduction__image">
-                </picture>
+
             </div>
         </div>
 
@@ -66,7 +69,7 @@
             <!-- Fanstille -->
             <article class="article" id="article_fanstille">
                 <h2 class="article__title title--size-big">Fanstille</h2>
-                <h4 class="article__title title--size-medium">Project MyBand - Juli 2017</h4>
+                <h4 class="article__title title--size-medium">Juli 2017</h4>
                 <img src="images/Fanstille-small.PNG" class="article__image image--from-fanstille" alt="Fanstille logo">
             </article>
             <div id="content_fanstille" class="popup">
@@ -75,6 +78,7 @@
                     <img src="images/Fanstille-large.PNG" alt="website preview Fanstille">
                 </picture>
                 <div class="popup__text">
+                    <h3 class="popup__title title--size-medium">Project MyBand</h3>
                     <p>
                         De opdracht was een fan site maken van jouw favoriete band en zoveel mogelijk functionaliteit toevoegen.
                         <br> Mijn website heeft onder andere de mogelijkheid om een reactie achter te kunnen laten.
@@ -86,8 +90,39 @@
                         <span class="code--lang lang-smarty">Smarty</span>
                     </div>
                     <div class="popup__buttons">
-                        <a href="https://github.com/Joshuavtk/Fanstille_complete" class="article__button link--selected-none" target="_blank">Github link</a>
+                        <a href="https://github.com/Joshuavtk/Fanstille_complete" class="article__button link--selected-none" target="_blank">Code op Github</a>
                         <a href="http://22288.hosts.ma-cloud.nl/bewijzenmap/p1.4/proj/Fanstille/" class="article__button link--selected-none" target="_blank">Bekijk online</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chess Game -->
+            <article class="article" id="article_chessgame">
+                <h2 class="article__title title--size-big">Chess Game</h2>
+                <h4 class="article__title title--size-medium">November 2017</h4>
+                <img src="images/ChessGame-small.PNG" class="article__image image--from-chessgame" alt="Chess Game logo">
+            </article>
+            <div id="content_chessgame" class="popup">
+                <picture>
+                    <source type="image/webp" srcset="images/compiled/ChessGame-large.webp">
+                    <img src="images/ChessGame-large.PNG" alt="website preview Chess Game">
+                </picture>
+                <div class="popup__text">
+                    <h3 class="popup__title title--size-medium">Eindopdracht ECMAScript 6</h3>
+                    <p>
+                        De opdracht was om een eigen webapp te maken. Ik kwam met het idee om een schaakspel te maken.
+                        <br>
+                    </p>
+                    <div class="popup__code_lang">
+                        <span class="code--lang lang-javascript">JavaScript</span>
+                        <span class="code--lang lang-ecmascript">ECMAScript 6</span>
+                        <span class="code--lang lang-mvc">MVC</span>
+                        <span class="code--lang lang-oop">OOP</span>
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="https://github.com/Joshuavtk/ChessGame" class="article__button link--selected-none" target="_blank">Code op Github</a>
+                        <a href="http://22288.hosts.ma-cloud.nl/bewijzenmap/p2.1/chessGame/index.html" class="article__button link--selected-none"
+                            target="_blank">Bekijk online</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +130,7 @@
             <!-- MaanRoosVis -->
             <article class="article" id="article_maanroosvis">
                 <h2 class="article__title title--size-big">MaanRoosVis</h2>
-                <h4 class="article__title title--size-medium">Project The Wall - April 2017</h4>
+                <h4 class="article__title title--size-medium">April 2017</h4>
                 <img src="images/MaanRoosVis-small.PNG" class="article__image image--from-maanroosvis" alt="MaanRoosVis logo">
             </article>
             <div id="content_maanroosvis" class="popup">
@@ -104,6 +139,7 @@
                     <img src="images/MaanRoosVis-large.PNG" alt="website preview MaanRoosVis">
                 </picture>
                 <div class="popup__text">
+                    <h3 class="popup__title title--size-medium">Project The Wall</h3>
                     <p>
                         Dit project is in samenwerking met Rick Hinfelaar gemaakt. De opdracht was een muur maken van foto's waarbij gebruikers hun
                         eigen foto's toe konden voegen.
@@ -117,7 +153,7 @@
                         <span class="code--lang lang-javascript">JavaScript</span>
                     </div>
                     <div class="popup__buttons">
-                        <a href="https://github.com/RickHinfelaar/TheWallMaanRoosVis" class="article__button link--selected-none" target="_blank">Github link</a>
+                        <a href="https://github.com/RickHinfelaar/TheWallMaanRoosVis" class="article__button link--selected-none" target="_blank">Code op Github</a>
                         <a href="http://22288.hosts.ma-cloud.nl/bewijzenmap/p1.3/proj/MaanRoosVis/" class="article__button link--selected-none" target="_blank">Bekijk online</a>
                     </div>
                 </div>
@@ -126,7 +162,7 @@
             <!-- FotoGallerij -->
             <article class="article" id="article_fotogallerij">
                 <h2 class="article__title title--size-big">Foto Gallerij</h2>
-                <h4 class="article__title title--size-medium">Front-end opdracht 9 - Januari 2017</h4>
+                <h4 class="article__title title--size-medium">Januari 2017</h4>
                 <img src="images/FotoGallerij-small.PNG" class="article__image image--from-fotogallerij" alt="Fotogallerij image">
             </article>
             <div id="content_fotogallerij" class="popup">
@@ -135,6 +171,7 @@
                     <img src="images/FotoGallerij-large.PNG" alt="website preview Fotogallerij">
                 </picture>
                 <div class="popup__text">
+                    <h3 class="popup__title title--size-medium">Front-end opdracht 9</h3>
                     <p>
                         De opdracht was een gallerij maken waar je een lijst met thumbnails ziet en als je op een van de thumbnails klikt, de foto
                         vergroot word.</p>
@@ -144,7 +181,7 @@
                         <span class="code--lang lang-javascript">JavaScript</span>
                     </div>
                     <div class="popup__buttons">
-                        <a href="https://github.com/Joshuavtk/Gallerij-opdracht" class="article__button link--selected-none" target="_blank">Github link</a>
+                        <a href="https://github.com/Joshuavtk/Gallerij-opdracht" class="article__button link--selected-none" target="_blank">Code op Github</a>
                         <a href="http://22288.hosts.ma-cloud.nl/bewijzenmap/p1.2/fro/opdracht9/" class="article__button link--selected-none" target="_blank">Bekijk online</a>
                     </div>
                 </div>
@@ -153,7 +190,7 @@
             <!-- Hallo Wereld -->
             <article class="article" id="article_hallowereld">
                 <h2 class="article__title title--size-big">Hallo wereld</h2>
-                <h4 class="article__title title--size-medium">Front-end opdracht 4 - November 2016</h4>
+                <h4 class="article__title title--size-medium">November 2016</h4>
                 <img src="images/HalloWereld-small.png" class="article__image image--from-hallowereld" alt="Hallo wereld">
             </article>
             <div id="content_hallowereld" class="popup">
@@ -162,6 +199,7 @@
                     <img src="images/HalloWereld-large.PNG" alt="website preview Hallo wereld">
                 </picture>
                 <div class="popup__text">
+                    <h3 class="popup__title title--size-medium">Front-end opdracht 4</h3>
                     <p>
                         De opdracht was om een website over jezelf te maken. Ik heb gekozen om deze opdracht bij mijn portfolio te zetten omdat het
                         laat zien hoeveel ik beter ben geworden in coderen in het laatste jaar.
@@ -176,35 +214,6 @@
                 </div>
             </div>
 
-            <!-- Chess Game -->
-            <article class="article" id="article_chessgame">
-                <h2 class="article__title title--size-big">Chess Game</h2>
-                <h4 class="article__title title--size-medium">Eindopdracht ECMAScript 6 - November 2017</h4>
-                <img src="images/ChessGame-small.PNG" class="article__image image--from-chessgame" alt="Chess Game logo">
-            </article>
-            <div id="content_chessgame" class="popup">
-                <picture>
-                    <source type="image/webp" srcset="images/compiled/ChessGame-large.webp">
-                    <img src="images/ChessGame-large.PNG" alt="website preview Chess Game">
-                </picture>
-                <div class="popup__text">
-                    <p>
-                        De opdracht was om een eigen webapp te maken. Ik besloot om een schaakspel te maken.
-                        <br>
-                    </p>
-                    <div class="popup__code_lang">
-                        <span class="code--lang lang-javascript">JavaScript</span>
-                        <span class="code--lang lang-mvc">MVC</span>
-                        <span class="code--lang lang-oop">OOP</span>
-                    </div>
-                    <div class="popup__buttons">
-                        <a href="https://github.com/Joshuavtk/ChessGame" class="article__button link--selected-none" target="_blank">Github link</a>
-                        <a href="http://22288.hosts.ma-cloud.nl/bewijzenmap/p2.1/chessGame/index.html" class="article__button link--selected-none"
-                            target="_blank">Bekijk online</a>
-                    </div>
-                </div>
-            </div>
-            
         </div>
 
         <!-- Skills -->

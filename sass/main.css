@@ -32,22 +32,22 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
 }
 
-main {
-  margin: auto 0;
+.main {
+  margin: 0 auto;
 }
 
-main ::selection {
-  background-color: red;
+.main ::selection {
+  background-color: #e50914;
 }
 
-main .main__title {
+.main__title {
   display: inline-block;
-  border-bottom: red 1px solid;
+  border-bottom: #e50914 1px solid;
   margin-left: 10px;
   font-weight: normal;
 }
 
-main .wrapper {
+.main .wrapper {
   width: 100%;
   margin-bottom: 2em;
 }
@@ -67,7 +67,7 @@ body {
 .header {
   padding: 10vh 0 0;
   margin-bottom: 10em;
-  background-color: red;
+  background-color: #e50914;
   width: 100%;
 }
 
@@ -111,8 +111,7 @@ body {
 
 .article {
   background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 2px 2px red;
-  flex: 1 1 70%;
+  box-shadow: 2px 2px #e50914;
   padding: 1em;
 }
 
@@ -125,7 +124,7 @@ body {
   display: inline-block;
   font-size: 12px;
   margin: 5px 0;
-  box-shadow: 2px 2px red;
+  box-shadow: 2px 2px #e50914;
 }
 
 .article__button:hover {
@@ -198,7 +197,7 @@ body {
 }
 
 .popup-window ::selection {
-  background-color: red;
+  background-color: #e50914;
 }
 
 @keyframes zoomIn {
@@ -288,7 +287,7 @@ body {
 }
 
 .skills__table tr {
-  border-bottom: red 1px solid;
+  border-bottom: #e50914 1px solid;
 }
 
 .skills__button {
@@ -306,20 +305,34 @@ body {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
-footer {
+.footer {
   text-align: center;
   padding: 20px 0;
-  background-color: red;
+  background-color: #e50914;
+  border-top: 1em solid white;
 }
 
-footer .footer__image {
+.footer .footer__image {
   width: 50px;
   height: 50px;
   margin: 5px;
 }
 
-footer ::selection {
+.footer ::selection {
   background-color: rgba(255, 255, 255, 0.25);
+}
+
+.footer p {
+  text-shadow: 1px 1px black;
+}
+
+.footer a:hover {
+  color: lightgoldenrodyellow;
+}
+
+.footer__title {
+  font-weight: normal;
+  text-shadow: 2px 2px black;
 }
 
 @media screen and (min-width: 768px) {
@@ -349,7 +362,7 @@ footer ::selection {
   .introduction__content .content__spacer {
     float: left;
     height: 100%;
-    background-color: red;
+    background-color: #e50914;
     width: 1px;
     margin: 0 10px;
     display: block;
@@ -359,67 +372,76 @@ footer ::selection {
     height: 100%;
     float: left;
   }
-  main {
+  .main {
     margin: auto;
   }
 }
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
-  main {
+  .main {
     width: 750px;
   }
-  main .main__title {
+  .main__title {
     margin-left: 15px;
   }
-  main .article {
+  .main .article {
     width: 41.7%;
   }
-  main .image--from-fanstille {
+  .main .image--from-fanstille {
     padding: 17px 0;
   }
-  main .image--from-fotogallerij {
-    padding: 5.7px 0;
+  .main .image--from-hallowereld {
+    padding: 5px 0;
+  }
+  .main .image--from-maanroosvis {
+    padding: 12.3px 0;
   }
 }
 
 @media screen and (min-width: 768px) and (min-width: 992px) {
-  main {
+  .main {
     width: 970px;
   }
-  main .article {
+  .main .article {
     width: 26.8%;
   }
-  main .image--from-fanstille {
+  .main .image--from-fanstille {
     padding: 21.5px 0;
   }
-  main .image--from-hallowereld {
-    padding: 4px 0;
+  .main .image--from-hallowereld {
+    padding: 18px 0;
   }
-  main .image--from-chessgame {
+  .main .image--from-fotogallerij {
+    padding: 14px 0;
+  }
+  .main .image--from-chessgame {
     padding: 7px 0;
   }
-  main .image--from-fotogallerij {
+  .main .image--from-maanroosvis {
     padding: 0;
   }
 }
 
 @media screen and (min-width: 768px) and (min-width: 1200px) {
-  main {
+  .main {
     width: 1170px;
   }
-  main .article {
+  .main .article {
     width: 27.9%;
   }
-  main .image--from-fanstille {
+  .main .image--from-fanstille {
     padding: 27px 0;
   }
-  main .image--from-hallowereld {
-    padding: 5px 0;
+  .main .image--from-hallowereld {
+    padding: 23px 0;
   }
-  main .image--from-chessgame {
+  .main .image--from-fotogallerij {
+    padding: 18px 0;
+  }
+  .main .image--from-chessgame {
     padding: 9px 0;
   }
-  main .introduction__content .content__col {
+  .main .introduction__content .content__col {
     width: 32.1%;
   }
 }
@@ -447,7 +469,7 @@ footer ::selection {
   .introduction__content p {
     width: 100%;
     text-align: left;
-    border-bottom: 1px red solid;
+    border-bottom: 1px #e50914 solid;
     margin-bottom: 5px;
     padding-bottom: 5px;
   }

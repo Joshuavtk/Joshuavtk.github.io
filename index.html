@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="manifest" href="/manifest.webmanifest">
     <meta name="theme-color" content="#e50914">
+    <meta name="author" content="Joshua van 't Kruis">
     <meta name="description" content="Op deze site vind je de portfolio van Joshua van 't Kruis">
     <meta name="keywords" content="PHP, CSS3, HTML5, MySQL, SASS, SCSS, Joshua van 't Kruis">
 
@@ -34,7 +35,7 @@
             </picture>
         </div>
     </header>
-    <main>
+    <main class="main">
         <!-- About me -->
         <h1 class="main__title">Over</h1>
         <div class="introduction">
@@ -130,8 +131,8 @@
             <!-- MaanRoosVis -->
             <article class="article" id="article_maanroosvis">
                 <h2 class="article__title title--size-big">MaanRoosVis</h2>
-                <h4 class="article__title title--size-medium">April 2017</h4>
-                <img src="images/MaanRoosVis-small.PNG" class="article__image image--from-maanroosvis" alt="MaanRoosVis logo">
+                <h4 class="article__title title--size-medium">Mei 2017</h4>
+                <img src="images/MaanRoosVis-small.jpg" class="article__image image--from-maanroosvis" alt="MaanRoosVis logo">
             </article>
             <div id="content_maanroosvis" class="popup">
                 <picture>
@@ -159,10 +160,39 @@
                 </div>
             </div>
 
+            <!-- Rekenspel -->
+            <article class="article" id="article_rekenspel">
+                <h2 class="article__title title--size-big">Rekenspel</h2>
+                <h4 class="article__title title--size-medium">Mei 2017</h4>
+                <img src="images/Rekenspel-small.png" class="article__image image--from-rekenspel" alt="Rekenspel">
+            </article>
+            <div id="content_rekenspel" class="popup">
+                <picture>
+                    <source type="image/webp" srcset="images/compiled/Rekenspel-large.webp">
+                    <img src="images/Rekenspel-large.PNG" alt="website preview Rekenspel">
+                </picture>
+                <div class="popup__text">
+                    <h3 class="popup__title title--size-medium">Front-end opdracht Rekenspel</h3>
+                    <p>
+                        De opdracht was om een simpel rekenspel te maken met JavaScript. Bij mijn rekenspel kan je kiezen uit plus, min, keer en deel sommen. <br> 
+                        Ook houdt het spel bij hoeveel je goed en fout hebt en hoelang je over het spel spelen doet, na 10 vragen beantwoord te hebben krijg je zelfs een cijfer.
+                    </p>
+                    <div class="popup__code_lang">
+                        <span class="code--lang lang-javascript">JavaScript</span>
+                        <span class="code--lang lang-html5">HTML5</span>
+                        <span class="code--lang lang-css3">CSS3</span>
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="http://22288.hosts.ma-cloud.nl/bewijzenmap/p1.3/fro/rekenspel/v3.0/" class="article__button link--selected-none"
+                            target="_blank">Bekijk online</a>
+                    </div>
+                </div>
+            </div>
+
             <!-- FotoGallerij -->
             <article class="article" id="article_fotogallerij">
                 <h2 class="article__title title--size-big">Foto Gallerij</h2>
-                <h4 class="article__title title--size-medium">Januari 2017</h4>
+                <h4 class="article__title title--size-medium">Februari 2017</h4>
                 <img src="images/FotoGallerij-small.PNG" class="article__image image--from-fotogallerij" alt="Fotogallerij image">
             </article>
             <div id="content_fotogallerij" class="popup">
@@ -286,23 +316,29 @@
 
 
     </main>
-    <footer>
-        <p>Copyright © 2017 Joshua van 't Kruis All Rights Reserved. </p>
-        <a href="mailto:joshuavtk@hotmail.com">
-            <img src="images/compiled/email-logo.png" alt="Email image" class="footer__image">
+    <footer class="footer">
+        <h1 class="footer__title">Contact info:</h1>
+        <p>
+            Email:
+            <a href="mailto:joshuavtk@hotmail.com">joshuavtk@hotmail.com</a>
+            <br> Telefoonnummer:
+            <a href="tel:0611423394">06-11423394</a>
+        </p>
+        <!-- <a href="mailto:joshuavtk@hotmail.com">
+            <img src="images/email-icon.png" alt="Email image" class="footer__image">
         </a>
         <a href="tel:0611423394">
             <img src="images/compiled/phone-logo.png" alt="phone image" class="footer__image">
-        </a>
+        </a> -->
         <a href="https://www.linkedin.com/in/joshua-van-t-kruis/" target="_blank">
             <img src="images/compiled/linkedin-logo.png" alt="LinkedIn image" class="footer__image">
         </a>
         <a href="https://github.com/Joshuavtk" target="_blank">
             <img src="images/compiled/github-logo.png" alt="github image" class="footer__image">
         </a>
+        <p>Copyright © 2017 Joshua van 't Kruis, All Rights Reserved.</p>
     </footer>
 
-    <!-- <script src="//code.jquery.com/jquery-1.10.2.min.js"></script> -->
     <script src="scripts/popup.js"></script>
 </body>
 

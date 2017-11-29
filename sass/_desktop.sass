@@ -9,12 +9,11 @@
     margin: 15px
 
 .header
-  padding: 10vh 0
-  margin-bottom: 2em
   .title--size-big
     font-size: 75px
   .title--size-medium
     font-size: 40px
+
 
 .introduction
   margin: 15px 15px 2em
@@ -29,43 +28,56 @@
       margin: 0 10px
       display: block
     .content__col
-      width: 30%
+      width: 31.3%
       height: 100%
       float: left
-  &__image
-    width: 250px !important
-    height: 250px !important
-    box-shadow: 2px 2px $secondary-color
-    float: right
 
-main
+.main
   margin: auto
   @media screen and (min-width: $min-width)
     width: 750px
-    .main__title
+    &__title
       margin-left: 15px
     .article
       width: 41.7%
     .image--from
       &-fanstille
-        padding: 25.5px 0
+        padding: 17px 0
       &-hallowereld
-        padding: 33.5px 0
+        padding: 5px 0
+      &-maanroosvis
+        padding: 12.3px 0
+
   @media screen and (min-width: $medium-width)
     width: 970px
     .article
-      width: 43.5%
+      width: 26.8%
     .image--from
       &-fanstille
-        padding: 35px 0
+        padding: 21.5px 0
       &-hallowereld
-        padding: 45px 0
+        padding: 18px 0
+      &-fotogallerij
+        padding: 14px 0
+      &-chessgame
+        padding: 7px 0
+      &-maanroosvis
+        padding: 0
+
   @media screen and (min-width: $max-width)
     width: 1170px
     .article
-      width: 44.6%
+      width: 27.9%
     .image--from
       &-fanstille
-        padding: 43px 0
+        padding: 27px 0
       &-hallowereld
-        padding: 55.5px 0
+        padding: 23px 0
+      &-fotogallerij
+        padding: 18px 0
+      &-chessgame
+        padding: 9px 0
+    .introduction
+      &__content
+        .content__col
+          width: 32.1%

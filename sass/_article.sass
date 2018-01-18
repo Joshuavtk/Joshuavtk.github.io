@@ -1,21 +1,27 @@
 .article
-  background-color: $main-color
-  box-shadow: 2px 2px $secondary-color
-  padding: 1em
-  &__button
-    line-height: 25px
-    background-color: $background-color
-    font-weight: 400
-    text-transform: uppercase
-    padding: 5px 10px
-    display: inline-block
-    font-size: 12px
-    margin: 5px 0
-    box-shadow: 2px 2px $secondary-color
-    &:hover
-      background-color: $secondary--color-selected
-  &__image
-    width: 100%
-  &:hover
-    background-color: $main--color-selected
-    cursor: pointer
+	background-color: $main-color
+	box-shadow: 2px 2px $secondary-color
+	padding: 1em
+	transition: .2s
+	&__button
+		line-height: 25px
+		background-color: $background-color
+		font-weight: 400
+		text-transform: uppercase
+		padding: 5px 10px
+		display: inline-block
+		font-size: 12px
+		margin: 5px 0
+		box-shadow: 2px 2px $secondary-color
+		transition: .2s
+		&:hover
+			background-color: $secondary--color-hover
+		&:active
+			background-color: $secondary--color-selected
+	&__image
+		width: 100%
+	&:hover
+		background-color: $main--color-hover
+		cursor: pointer
+	&:active
+		background-color: $main--color-selected

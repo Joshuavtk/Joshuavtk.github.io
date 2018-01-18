@@ -1,29 +1,31 @@
 .skills
-    display: flex
-    &__left
-        margin-bottom: 2em
-    &__right
-        margin: auto
-        padding-bottom: 2em
-    &__table
-        border-collapse: collapse
-        &_td
-        .td--type-text
-            width: 80%
-            font-size: 18px 
-        .td--type-stars
-            width: 20%
-            font-size: 135%
-        tr
-            border-bottom: $secondary-color 1px solid
-    &__button
-        line-height: 25px
-        background-color: $main-color
-        font-weight: 400
-        text-transform: uppercase
-        padding: 5px 10px
-        display: inline-block
-        font-size: 14px
-        margin: 5px 0
-        &:hover
-            background-color: $main--color-selected
+	display: flex
+	&__left
+		margin-bottom: 2em
+	&__right
+		margin: auto
+		padding-bottom: 2em
+	&__table
+		border-collapse: collapse
+		.td--type-text
+			width: 80%
+			font-size: 18px 
+		.td--type-stars
+			width: 20%
+			font-size: 135%
+		tr
+			border-bottom: $secondary-color 1px solid
+	&__button
+		line-height: 25px
+		background-color: $main-color
+		font-weight: 400
+		text-transform: uppercase
+		padding: 5px 10px
+		display: inline-block
+		font-size: 14px
+		margin: 5px 0
+		transition: .2s
+		&:hover
+			background-color: $main--color-hover
+		&:active
+			background-color: $main--color-selected

@@ -1,7 +1,7 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 html:hover {
@@ -40,6 +40,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   background-color: #e50914;
 }
 
+.main ::-moz-selection {
+  background-color: #e50914;
+}
+
 .main__title {
   display: inline-block;
   border-bottom: #e50914 1px solid;
@@ -50,6 +54,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 .main .wrapper {
   width: 100%;
   margin-bottom: 2em;
+}
+
+html {
+  background-color: #131313;
 }
 
 body {
@@ -69,6 +77,7 @@ body {
   margin-bottom: 10em;
   background-color: #e50914;
   width: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 .header__title {
@@ -77,7 +86,7 @@ body {
 
 .header .title--size-big {
   font-size: 55px;
-  text-shadow: 3px 3px black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 3px 3px black;
 }
 
 .header .title--size-medium {
@@ -91,7 +100,11 @@ body {
 }
 
 .header ::selection {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.header ::-moz-selection {
+  background-color: rgba(255, 255, 255, 0.35);
 }
 
 .header__image {
@@ -113,6 +126,7 @@ body {
   background-color: rgba(255, 255, 255, 0.15);
   box-shadow: 2px 2px #e50914;
   padding: 1em;
+  transition: .2s;
 }
 
 .article__button {
@@ -125,10 +139,15 @@ body {
   font-size: 12px;
   margin: 5px 0;
   box-shadow: 2px 2px #e50914;
+  transition: .2s;
 }
 
 .article__button:hover {
   background-color: #F44336;
+}
+
+.article__button:active {
+  background-color: #c7000a;
 }
 
 .article__image {
@@ -138,6 +157,10 @@ body {
 .article:hover {
   background-color: rgba(255, 255, 255, 0.25);
   cursor: pointer;
+}
+
+.article:active {
+  background-color: rgba(255, 255, 255, 0.35);
 }
 
 .popup {
@@ -232,11 +255,20 @@ body {
   position: absolute;
   top: 10px;
   right: 35px;
+  transition: .2s;
 }
 
 .exit-button:hover {
   color: #F44336;
   cursor: pointer;
+}
+
+.exit-button:active {
+  color: #c7000a;
+}
+
+.exit-button::selection {
+  background-color: transparent;
 }
 
 @media screen and (max-width: 1150px) {
@@ -299,10 +331,15 @@ body {
   display: inline-block;
   font-size: 14px;
   margin: 5px 0;
+  transition: .2s;
 }
 
 .skills__button:hover {
   background-color: rgba(255, 255, 255, 0.25);
+}
+
+.skills__button:active {
+  background-color: rgba(255, 255, 255, 0.35);
 }
 
 .footer {
@@ -319,7 +356,11 @@ body {
 }
 
 .footer ::selection {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.footer ::-moz-selection {
+  background-color: rgba(255, 255, 255, 0.35);
 }
 
 .footer p {
@@ -525,6 +566,4 @@ body {
     display: block;
   }
 }
- 
-
- /*# sourceMappingURL= main.css.map */
+/*# sourceMappingURL=main.css.map */

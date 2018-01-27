@@ -1,5 +1,5 @@
 //variables
-$main-font: sans-serif
+$main-font: "Roboto", sans-serif
 
 //Light Dark theme
 // $text-color: #eeeeee
@@ -13,10 +13,12 @@ $main-font: sans-serif
 //Dark theme
 $text-color: #eeeeee
 $main-color: rgba(255, 255, 255, 0.15)
-$main--color-selected: rgba(255, 255, 255, 0.25);
+$main--color-hover: rgba(255, 255, 255, 0.25)
+$main--color-selected: rgba(255, 255, 255, 0.35)
 $background-color: #131313
 $secondary-color: #e50914
-$secondary--color-selected: #F44336
+$secondary--color-hover: #F44336
+$secondary--color-selected: #c7000a
 $popup-color: #414141
 
 //Light theme
@@ -29,6 +31,8 @@ $popup-color: #414141
 // $popup-color: #6495ed
 
 //computer widths
+$four-k: '2160px'
+$quad-hd: '1440px'
 $max-width: '1200px'
 $medium-width: '992px'
 $min-width: '768px'
@@ -44,7 +48,7 @@ $min-width: '768px'
 
 //screen sizes
 @media screen and (min-width: $min-width)
-  @import "desktop"
+	@import "desktop"
 
 @media screen and (max-width: 767px)
-  @import "mobile"
+	@import "mobile"

@@ -1,83 +1,74 @@
 .article
-  margin: 15px
-  padding: 15px
+	margin: 15px
+	padding: 15px
 
 .skills
-  &__table
-    margin: 15px
-  &__buttons
-    margin: 15px
+	&__table
+		margin: 15px
+	&__buttons
+		margin: 15px
 
 .header
-  .title--size-big
-    font-size: 75px
-  .title--size-medium
-    font-size: 40px
+	.title--size-big
+		font-size: 75px
+	.title--size-medium
+		font-size: 40px
 
 
 .introduction
-  margin: 15px 15px 2em
-  &__content
-    display: flex
-    width: 100%
-    .content__spacer
-      float: left
-      height: 100%
-      background-color: $secondary-color
-      width: 1px
-      margin: 0 10px
-      display: block
-    .content__col
-      width: 31.3%
-      height: 100%
-      float: left
+	margin: 15px 15px 2em
+	&__content
+		display: flex
+		width: 100%
+		.content__spacer
+			float: left
+			height: 100%
+			background-color: $secondary-color
+			width: 1px
+			margin: 0 10px
+			display: block
+		.content__col
+			width: 31.3%
+			height: 100%
+			float: left
 
 .main
-  margin: auto
-  @media screen and (min-width: $min-width)
-    width: 750px
-    &__title
-      margin-left: 15px
-    .article
-      width: 41.7%
-    .image--from
-      &-fanstille
-        padding: 17px 0
-      &-hallowereld
-        padding: 5px 0
-      &-maanroosvis
-        padding: 12.3px 0
+	margin: auto
+	@media screen and (min-width: $min-width)
+		width: 750px
+		&__title
+			margin-left: 15px
+		.article
+			width: 41.7%
 
-  @media screen and (min-width: $medium-width)
-    width: 970px
-    .article
-      width: 26.8%
-    .image--from
-      &-fanstille
-        padding: 21.5px 0
-      &-hallowereld
-        padding: 18px 0
-      &-fotogallerij
-        padding: 14px 0
-      &-chessgame
-        padding: 7px 0
-      &-maanroosvis
-        padding: 0
+	@media screen and (min-width: $medium-width)
+		width: 970px
+		.article
+			width: 26.8%
 
-  @media screen and (min-width: $max-width)
-    width: 1170px
-    .article
-      width: 27.9%
-    .image--from
-      &-fanstille
-        padding: 27px 0
-      &-hallowereld
-        padding: 23px 0
-      &-fotogallerij
-        padding: 18px 0
-      &-chessgame
-        padding: 9px 0
-    .introduction
-      &__content
-        .content__col
-          width: 32.1%
+	@media screen and (min-width: $max-width)
+		width: 1170px
+		.article
+			width: 27.9%
+		.introduction
+			&__content
+				.content__col
+					width: 32.1%
+
+	@media screen and (min-width: $quad-hd)
+		width: 1400px
+		.article
+			width: 20.5%
+		.introduction
+			&__content
+				.content__col
+					width: 32.1%
+
+	@media screen and (min-width: $four-k)
+		width: 2100px
+		.article
+			width: 22%
+		.introduction
+			&__content
+				.content__col
+					width: 32.1%

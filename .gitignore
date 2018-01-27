@@ -47,11 +47,9 @@ Temporary Items
 .apdisk
 
 #intelliJ
-*.xml
 *.iml
+/.idea
 
 #Compiled sass files
 *.css.map
 _*.css
-
-*.exe

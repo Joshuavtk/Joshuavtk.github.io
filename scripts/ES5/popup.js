@@ -1,26 +1,28 @@
+'use strict';
+
 // Initialise DOM
-const grayBackground = document.createElement('div');
+var grayBackground = document.createElement('div');
 document.body.appendChild(grayBackground);
-const exitButton = document.createElement('span');
+var exitButton = document.createElement('span');
 exitButton.innerHTML = '&Cross;';
 exitButton.className = 'exit-button';
 
 // Initialise popup functions
-const popup = (function () {
-    const popupWindow = document.createElement('div');
+var popup = function () {
+    var popupWindow = document.createElement('div');
     popupWindow.className = 'popup-window';
     popupWindow.addEventListener('click', function (e) {
         e.stopPropagation();
     });
 
     return {
-        center: function () {
-            let top = Math.max((grayBackground.offsetHeight - popupWindow.offsetHeight) / 2, 0);
-            let left = Math.max((grayBackground.offsetWidth - popupWindow.offsetWidth) / 2, 0);
+        center: function center() {
+            var top = Math.max((grayBackground.offsetHeight - popupWindow.offsetHeight) / 2, 0);
+            var left = Math.max((grayBackground.offsetWidth - popupWindow.offsetWidth) / 2, 0);
             popupWindow.style.top = top + 'px';
             popupWindow.style.left = left + 'px';
         },
-        open: function (parameter) {
+        open: function open(parameter) {
             popupWindow.appendChild(parameter);
             popupWindow.appendChild(exitButton);
 
@@ -29,7 +31,7 @@ const popup = (function () {
             popup.center();
             window.addEventListener('resize', popup.center(), true);
         },
-        close: function () {
+        close: function close() {
             function closeFinisher() {
                 popupWindow.innerHTML = '';
                 grayBackground.removeChild(popupWindow);
@@ -39,32 +41,39 @@ const popup = (function () {
             grayBackground.className += ' zoomOut';
             setTimeout(closeFinisher, 300);
         }
-    }
-}());
+    };
+}();
 
 // Event listeners
 grayBackground.onclick = popup.close;
 exitButton.onclick = popup.close;
 
 // Array with popup articles
-const articles = ['agenda', 'chessgame', 'fanstille', 'maanroosvis', 'rekenspel', 'fotogallerij', 'hallowereld'];
-let buttons = [];
-let contents = [];
-for (let i = 0; i < articles.length; i++) {
+var articles = ['agenda', 'chessgame', 'fanstille', 'maanroosvis', 'rekenspel', 'fotogallerij', 'hallowereld'];
+var buttons = [];
+var contents = [];
+
+var _loop = function _loop(i) {
     contents[i] = document.getElementById('content_' + articles[i]);
     buttons[i] = document.getElementById('article_' + articles[i]);
     contents[i].parentNode.removeChild(contents[i]);
     buttons[i].addEventListener('click', function () {
         popup.open(contents[i]);
     });
+};
+
+for (var i = 0; i < articles.length; i++) {
+    _loop(i);
 }
 
 // Sizing the thumbnails
-window.onresize = () => { resizeArticles(calculateViewport())};
+window.onresize = function () {
+    resizeArticles(calculateViewport());
+};
 resizeArticles(calculateViewport());
 
 function calculateViewport() {
-    let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     switch (true) {
         case w >= 2160:
             return 212;
@@ -77,8 +86,8 @@ function calculateViewport() {
         case w >= 768:
             return 144;
         default:
-            articles.forEach(element => {
-                let image = document.querySelector(".image--from-" + element);
+            articles.forEach(function (element) {
+                var image = document.querySelector(".image--from-" + element);
                 image.style.margin = "0";
             });
             break;
@@ -87,9 +96,9 @@ function calculateViewport() {
 
 // Adding the padding to the images
 function resizeArticles(size) {
-    articles.forEach(element => {
-        let image = document.querySelector(".image--from-" + element);
-        let margin = (size - image.height) / 2;
+    articles.forEach(function (element) {
+        var image = document.querySelector(".image--from-" + element);
+        var margin = (size - image.height) / 2;
         image.style.margin = margin + "px 0";
     });
 }

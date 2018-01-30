@@ -93,4 +93,4 @@ function resizeArticles(size) {
     });
 }
 
-window.onload(resizeArticles(calculateViewport()));
+addEventListener("load", resizeArticles(calculateViewport()));

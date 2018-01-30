@@ -61,7 +61,6 @@ for (let i = 0; i < articles.length; i++) {
 
 // Sizing the thumbnails
 window.onresize = () => { resizeArticles(calculateViewport())};
-resizeArticles(calculateViewport());
 
 function calculateViewport() {
     let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -93,3 +92,5 @@ function resizeArticles(size) {
         image.style.margin = margin + "px 0";
     });
 }
+
+window.onload(resizeArticles(calculateViewport()));

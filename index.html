@@ -16,6 +16,21 @@
         gtag('config', 'UA-111625124-1');
     </script>
 
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "Joshua van 't Kruis",
+            "image": "http://joshuavtk.me/images/compiled/Portfolio_foto.jpg",
+            "url": "http://joshuavtk.me",
+            "sameAs": [
+                "https://www.linkedin.com/in/joshua-van-t-kruis/",
+                "https://github.com/Joshuavtk"
+            ],
+            "affiliation": "Mediacollege Amsterdam"
+        }
+    </script>
+
     <!-- Meta ports -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -32,7 +47,7 @@
 
     <!-- stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
-    <link rel="stylesheet" href="sass/style.css" type="text/css">
+    <link rel="stylesheet" href="sass/main.css" type="text/css">
 
     <!-- Title -->
     <title>Portfolio | Joshua van 't Kruis | Mediadeveloper</title>
@@ -368,12 +383,14 @@
     </main>
     <footer class="footer">
         <h1 class="footer__title">Contact info:</h1>
-        <p>
-            Email:
+        <!-- <p> -->
+        <img class="footer__contact_info" src="images/Contact-info.PNG" alt="contact info">
+        <!-- Email:
             <a href="mailto:joshuavtk@hotmail.com">joshuavtk@hotmail.com</a>
             <br> Telefoonnummer:
-            <a href="tel:0611423394">06-11423394</a>
-        </p>
+            <a href="tel:0611423394">06-11423394</a> -->
+        <!-- </p> -->
+        <br>
         <a href="https://www.linkedin.com/in/joshua-van-t-kruis/" target="_blank">
             <img src="images/compiled/linkedin-logo.png" alt="LinkedIn image" class="footer__image">
         </a>
@@ -385,10 +402,10 @@
     </footer>
 
     <!-- Scripts -->
-    <!--<script src="scripts/popup.js"></script>-->
-    <!--<script src="scripts/date.js"></script>-->
-    <script src="scripts/minified/popup.js"></script>
-    <script src="scripts/minified/date.js"></script>
+    <script src="scripts/popup.js"></script>
+    <script src="scripts/date.js"></script>
+    <!-- <script src="scripts/minified/popup.js"></script>
+    <script src="scripts/minified/date.js"></script> -->
 
 </body>
 

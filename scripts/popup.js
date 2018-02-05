@@ -94,3 +94,4 @@ function resizeArticles(size) {
 }
 
 addEventListener("load", resizeArticles(calculateViewport()));
+resizeArticles(calculateViewport());

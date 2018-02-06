@@ -60,7 +60,9 @@ for (let i = 0; i < articles.length; i++) {
 }
 
 // Sizing the thumbnails
-window.onresize = () => { resizeArticles(calculateViewport())};
+window.onresize = () => {
+    resizeArticles(calculateViewport())
+};
 
 function calculateViewport() {
     let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -94,4 +96,6 @@ function resizeArticles(size) {
 }
 
 addEventListener("load", resizeArticles(calculateViewport()));
-resizeArticles(calculateViewport());
+setInterval(function () {
+    resizeArticles(calculateViewport())
+}, 2000);

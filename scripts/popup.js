@@ -1,3 +1,4 @@
+//@ts-check
 // Initialise DOM
 const grayBackground = document.createElement('div');
 document.body.appendChild(grayBackground);
@@ -23,6 +24,7 @@ const popup = (function () {
         open: function (parameter) {
             popupWindow.appendChild(parameter);
             popupWindow.appendChild(exitButton);
+            // document.querySelector('body').style.overflow = 'hidden';
 
             grayBackground.className = 'gray-background';
             grayBackground.appendChild(popupWindow);
@@ -35,11 +37,12 @@ const popup = (function () {
                 grayBackground.removeChild(popupWindow);
                 grayBackground.className = '';
             }
+            // document.querySelector('body').style.overflow = 'unset';
 
             grayBackground.className += ' zoomOut';
             setTimeout(closeFinisher, 300);
         }
-    }
+    };
 }());
 
 // Event listeners
@@ -61,41 +64,41 @@ for (let i = 0; i < articles.length; i++) {
 
 // Sizing the thumbnails
 window.onresize = () => {
-    resizeArticles(calculateViewport())
+    resizeArticles(calculateViewport());
 };
 
 function calculateViewport() {
     let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     switch (true) {
-        case w >= 2160:
-            return 212;
-        case w >= 1440:
-            return 132;
-        case w >= 1200:
-            return 151;
-        case w >= 992:
-            return 121;
-        case w >= 768:
-            return 144;
-        default:
-            articles.forEach(element => {
-                let image = document.querySelector(".image--from-" + element);
-                image.style.margin = "0";
-            });
-            break;
+    case w >= 2160:
+        return 212;
+    case w >= 1440:
+        return 132;
+    case w >= 1200:
+        return 151;
+    case w >= 992:
+        return 121;
+    case w >= 768:
+        return 144;
+    default:
+        articles.forEach(element => {
+            let image = document.querySelector('.image--from-' + element);
+            image.style.margin = '0';
+        });
+        break;
     }
 }
 
 // Adding the padding to the images
 function resizeArticles(size) {
     articles.forEach(element => {
-        let image = document.querySelector(".image--from-" + element);
+        let image = document.querySelector('.image--from-' + element);
         let margin = (size - image.height) / 2;
-        image.style.margin = margin + "px 0";
+        image.style.margin = margin + 'px 0';
     });
 }
 
-addEventListener("load", resizeArticles(calculateViewport()));
+addEventListener('loadeddata', () => resizeArticles(calculateViewport()));
 setInterval(function () {
-    resizeArticles(calculateViewport())
-}, 2000);
+    resizeArticles(calculateViewport());
+}, 1000);

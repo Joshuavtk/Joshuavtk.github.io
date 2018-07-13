@@ -36,6 +36,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0 auto;
 }
 
+.main ::-moz-selection {
+  background-color: #e50914;
+}
+
 .main ::selection {
   background-color: #e50914;
 }
@@ -72,8 +76,13 @@ body {
   background-color: #131313;
   color: #eeeeee;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 ::-webkit-scrollbar {
@@ -115,6 +124,10 @@ body {
   display: none;
 }
 
+.header ::-moz-selection {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
 .header ::selection {
   background-color: rgba(255, 255, 255, 0.35);
 }
@@ -140,8 +153,10 @@ body {
 
 .article {
   background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 4px 4px 3px #e50914;
+  -webkit-box-shadow: 4px 4px 3px #e50914;
+          box-shadow: 4px 4px 3px #e50914;
   padding: 1em;
+  -webkit-transition: .2s;
   transition: .2s;
   border-radius: 8px;
   text-align: center;
@@ -157,7 +172,9 @@ body {
   font-size: 12px;
   margin: 5px 0;
   border-radius: 2px;
-  box-shadow: 2px 2px #e50914;
+  -webkit-box-shadow: 2px 2px #e50914;
+          box-shadow: 2px 2px #e50914;
+  -webkit-transition: .2s;
   transition: .2s;
 }
 
@@ -177,8 +194,10 @@ body {
 .article:hover {
   background-color: rgba(255, 255, 255, 0.25);
   cursor: pointer;
-  transform: scale(1.03);
-  box-shadow: 5px 5px 4px #F44336;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-box-shadow: 5px 5px 4px #F44336;
+          box-shadow: 5px 5px 4px #F44336;
 }
 
 .article:active {
@@ -186,11 +205,15 @@ body {
 }
 
 .popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .popup div {
-  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 
 .popup img, .popup picture {
@@ -230,7 +253,17 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  animation: showBackground .4s forwards;
+  -webkit-animation: showBackground .4s forwards;
+          animation: showBackground .4s forwards;
+}
+
+@-webkit-keyframes showBackground {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 @keyframes showBackground {
@@ -239,6 +272,15 @@ body {
   }
   to {
     background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@-webkit-keyframes removeBackground {
+  from {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  to {
+    background-color: transparent;
   }
 }
 
@@ -256,23 +298,55 @@ body {
   width: 70%;
   background-color: #414141;
   padding: 1em;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: fixed;
-  animation: zoomIn 0.7s forwards;
+  -webkit-animation: zoomIn 0.7s forwards;
+          animation: zoomIn 0.7s forwards;
   border-radius: 8px;
+}
+
+.popup-window ::-moz-selection {
+  background-color: #e50914;
 }
 
 .popup-window ::selection {
   background-color: #e50914;
 }
 
-@keyframes zoomIn {
+@-webkit-keyframes zoomIn {
   from {
     opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
   }
   50% {
     opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
   }
 }
 
@@ -282,7 +356,8 @@ body {
   }
   50% {
     opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
   }
   to {
     opacity: 0;
@@ -290,11 +365,13 @@ body {
 }
 
 .zoomOut {
-  animation: removeBackground .25s forwards;
+  -webkit-animation: removeBackground .25s forwards;
+          animation: removeBackground .25s forwards;
 }
 
 .zoomOut .popup-window {
-  animation: zoomOut 0.5s;
+  -webkit-animation: zoomOut 0.5s;
+          animation: zoomOut 0.5s;
 }
 
 .exit-button {
@@ -302,6 +379,7 @@ body {
   position: absolute;
   top: 10px;
   right: 35px;
+  -webkit-transition: .2s;
   transition: .2s;
 }
 
@@ -312,6 +390,10 @@ body {
 
 .exit-button:active {
   color: #c7000a;
+}
+
+.exit-button::-moz-selection {
+  background-color: transparent;
 }
 
 .exit-button::selection {
@@ -339,6 +421,8 @@ body {
 }
 
 .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -376,10 +460,12 @@ body {
   text-transform: uppercase;
   padding: 5px 10px;
   display: inline-block;
-  box-shadow: 2px 2px #e50914;
+  -webkit-box-shadow: 2px 2px #e50914;
+          box-shadow: 2px 2px #e50914;
   border-radius: 2px;
   font-size: 14px;
   margin: 5px 0;
+  -webkit-transition: .2s;
   transition: .2s;
 }
 
@@ -402,6 +488,10 @@ body {
   width: 50px;
   height: 50px;
   margin: 5px;
+}
+
+.footer ::-moz-selection {
+  background-color: rgba(255, 255, 255, 0.35);
 }
 
 .footer ::selection {
@@ -450,6 +540,8 @@ body {
     margin: 15px 15px 2em;
   }
   .introduction__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
   }

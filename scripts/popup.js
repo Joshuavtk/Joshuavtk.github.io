@@ -50,7 +50,7 @@ grayBackground.onclick = popup.close;
 exitButton.onclick = popup.close;
 
 // Array with popup articles
-const articles = ['agenda', 'chessgame', 'fanstille', 'maanroosvis', 'rekenspel', 'fotogallerij', 'hallowereld'];
+const articles = ['form', 'agenda', 'chessgame', 'fanstille', 'maanroosvis', 'rekenspel', 'fotogallerij', 'hallowereld'];
 let buttons = [];
 let contents = [];
 for (let i = 0; i < articles.length; i++) {

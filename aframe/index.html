@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <!-- Hier is het VR deel -->
+    <a-scene id="beeld">
+      <a-entity id="viewpoint" position="0.49 2 0">
+        <a-camera id="camera" position="0.24687114057792361 0 -0.18485825745886159">
+          <a-cursor color="green"></a-cursor>
+        </a-camera>
+      </a-entity>
+
+        <a-assets>
+          <!-- Stove -->
+          <a-asset-item id="stove-obj" src="/models/stove/tim-island-base-2000-with-bar-area.obj"></a-asset-item>
+          <a-asset-item id="stove-mtl" src="/models/stove/tim-island-base-2000-with-bar-area.mtl"></a-asset-item>
+
+          <!-- Fire on stove -->
+          <a-asset-item id="fire-obj" src="/models/fire/PUSHILIN_campfire.obj"></a-asset-item>
+          <a-asset-item id="fire-mtl" src="/models/fire/PUSHILIN_campfire.mtl"></a-asset-item>
+
+          <!-- garden / envoriment -->
+          <a-asset-item id="garden-obj" src="/models/garden/model.obj"></a-asset-item>
+          <a-asset-item id="garden-mtl" src="/models/garden/materials.mtl"></a-asset-item>
+
+          <!-- frying pan -->
+          <a-asset-item id="fryingpan-obj" src="/models/fryingpan/model.obj"></a-asset-item>
+          <a-asset-item id="fryingpan-mtl" src="/models/fryingpan/materials.mtl"></a-asset-item>
+
+		  <!-- onion -->
+		  <a-asset-item id="onion-obj" src="/models/onion/onion.obj"></a-asset-item>
+          <a-asset-item id="onion-mtl" src="/models/onion/onion.mtl"></a-asset-item>
+
+		  <!-- knife -->
+		  <a-asset-item id="knife-obj" src="/models/knife/KitchenKnife.obj"></a-asset-item>
+          <a-asset-item id="knife-mtl" src="/models/knife/KitchenKnife.mtl"></a-asset-item>
+
+		  <!-- dish -->
+		  <a-asset-item id="knife-obj" src="/models/dish/Dish.obj"></a-asset-item>
+          <a-asset-item id="knife-mtl" src="/models/dish/Dish.mtl"></a-asset-item>
+
+		  <!-- garlic -->
+		  <a-asset-item id="garlic" src="/models/garlic/Garlic.obj"></a-asset-item>
+          <a-asset-item id="garlic" src="/models/garlic/Garlic.mtl"></a-asset-item>
+
+
+		  <a-sound src="/audio/Fire-sound-start.mp3" autoplay = "false"></a-sound>
+		  <a-sound src="/audio/KnifeCutting.mp3" autoplay="false"></a-sound>
+		  <a-sound src="/audio/HamberGril.mp3" autoplay="false"></a-sound>
+
+		  <a-asset-item id="Tomaat-obj" src="/models/Tomaat/Tomaat.obj"></a-asset-item>
+		  <a-asset-item id="Tomaat-mtl" src="/models/Tomaat/Tomaat.mtl"></a-asset-item>
+
+		  <a-asset-item id="Tomaat-Slice-obj" src="/models/Tomaat/CHAHIN_TOMATO_SLICE.obj"></a-asset-item>
+		  <a-asset-item id="Tomaat-Slice-mtl" src="/models/Tomaat/CHAHIN_TOMATO_SLICE.mtl"></a-asset-item>
+
+
+
+        </a-assets>
+
+		<!-- bord en uitleg -->
+		<a-box id="uitleg-bord" color="white" position="0.9492699874695536 2.3595846466911596 -2.421270442592533" rotation="90 0 0" scale="2.5 0.07 2.59" material="color:#949494" geometry=""></a-box>
+		<a-text id="uitleg-tekst" value="Uitleg" color="black" position="0.7006449718266241 3.3714577769676692 -2.3117504915090272" rotation="0 0 0" text=""></a-text>
+		<a-text id="start" value="Start" color="Green" position="0.73358940849955 2.451971768846048 -2.335815041970301" rotation="0 0 0" text="color:#00ff00"></a-text>
+		<a-text id="uitleg-stap1" value="Stap1: Pak het mes" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="0 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+		<a-text id="uitleg-stap2" value="Stap2: Snij de ui, gem sla en tomaat in plakken" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="0 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+		<a-text id="uitleg-stap3" value="Stap3: Snij de zwarte knoflook zo fijn mogelijk" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="0 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+		<a-text id="uitleg-stap4" value="Stap4: Leg het mes terug" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="0 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+		<a-text id="uitleg-stap5" value="Stap5: Stop de knoflook in de hamburger en pak deze op" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="0.0 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+		<a-text id="uitleg-stap6" value="Stap6: Plaats de hamburger op de grill" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="0 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+		<a-text id="uitleg-stap7" value="Stap7: Pak de pan en zet deze op het fornuis" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="0 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+		<a-text id="uitleg-stap8" value="Stap8: Gooi de ui in de pan en zet het vuur aan" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="0 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+		<a-text id="uitleg-stap9" value="Stap9: Plaats de hamburger op het broodje" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="29 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+		<a-text id="uitleg-stap10" value="Stap10: Zet het vuur uit en doe de ui op het broodje" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="29 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+		<a-text id="uitleg-stap11" value="Stap11: Doe de sla op het broodje" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="0 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+		<a-text id="uitleg-stap12" value="Stap12: Doe de tomaat op het broodje en doe de deksel erop" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="0 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+		<a-text id="uitleg-stap13" value="Stap13: Eetsmakelijk!" color="black" position="-0.07683735828350327 2.479668183747647 -2.322367063370948" rotation="0 0 0" text="" scale="0.54 0.76 1" visible="false"></a-text>
+
+		<!-- ingredients -->
+		<a-cylinder id="burger" color="brown" position="1.6969304682198636 1.1329266173107346 0.2383153621827624" scale="0.060000000000000026 0.030000000000000027 0.059999999999999956" material="" geometry=""></a-cylinder>
+		<a-entity id="onion" obj-model="obj:/models/onion/onion.obj;mtl:/models/onion/onion.mtl" position="1.681223312099352 1.1146700919719608 0.8862001545473597" rotation="0 90 0" scale="0.060000000000000026 0.05999999999999997 0.05999999999999997"></a-entity>
+		<a-cylinder id="sla" color="green" position="1.8036302277154774 1.1347988597906686 0.536218833304023" scale="0.09000000000000001 0.12 0.07999999999999999" material="" geometry=""></a-cylinder>
+		<a-entity id="tomaat" obj-model="obj:#Tomaat-obj; mtl:#Tomaat-mtl" scale="0.003 0.003 0.003"position="1.3592113229711518 1.136 0.27753822830710717"  rotation="-90 -0.11 0"></a-entity>
+
+		<a-entity id="zwarte-knoflook" obj-model="obj:/models/garlic/Garlic.obj;mtl:/models/garlic/Garlic.mtl" position="1.3335508251836168 1.0773877796313467 0.6484016350694599" rotation="0 180 0" scale="0.06 0.04000000000000001 0.039999999999999994" material="opacity:0.1"></a-entity>
+
+
+
+		<!--ingredients gesneden -->
+		<a-entity id="tomaat-gesneden" obj-model="obj:#Tomaat-Slice-obj; mtl:#Tomaat-Slice-mtl"position="1.359 1.105 0.278" scale="0.2 0.2 0.2" rotation="0 -0.11 0" visible="false"></a-entity>
+		<a-cylinder id="onionsliced" color="#B22222" position="1.6465508847333865 1.0893818335478735 0.8862669987061668" scale="0.08000000000000003 2.7755575615628914e-17 0.05999999999999998" visible="false" material="" geometry="" ></a-cylinder>
+		<a-cylinder id="sla-gesneden" color="green" position="1.8036302277154774 1.1347988597906686 0.536218833304023" scale="0.09000000000000001 0.03 0.07999999999999999" material="" geometry="" visible="false"></a-cylinder>
+		<a-cylinder id="zwarte-knoflook-gesneden" color="red" position="1.359 1.095 0.6442853922670433" scale="-0.03 -0.03 0.04" material="color:#000000" geometry="" rotation="0 -0.11 0" visible="false"></a-cylinder>
+
+
+		<a-cylinder id="bottom-bun" color="#FFDAB9" position="1.5809927105652637 1.007398768224492 -1.0096444107167932" rotation="-0.38 -0.38 0" scale="0.08000000000000004 0.04 0.07999999999999997" material="" geometry=""></a-cylinder>
+		<a-cylinder id="top-bun" color="#FFDAB9" position="1.62095628156453 1.0346886641688977 -0.8921908605889067" rotation="29.999999999999996 -0.38 0" scale="0.08 0.04 0.08" material="" geometry=""></a-cylinder>
+
+		<a-entity id="dish" obj-model="obj:/models/dish/Dish.obj;mtl:/models/dish/Dish.mtl" position="1.5522465219327066 0.9911186614321095 -1.0234641442255532"></a-entity>
+
+    <!-- pointers -->
+		<a-entity id="fryingpan-pointer" obj-model="obj:/models/fryingpan/model.obj;mtl:/models/fryingpan/materials.mtl" position="0.5735984674342636 1.140557579734661 -0.622747389746881" rotation="0 180 0" scale="0.18 0.2 0.15" visible="false" material="opacity:0.1;"></a-entity>
+
+		<a-cylinder id="burger-pointer" color="#8B4513" position="-0.14443310513620022 1.046850395346184 -0.7819539405693117" scale="0.060000000000000026 0.030000000000000027 0.059999999999999956" material="" geometry="" visible="false"></a-cylinder>
+		<a-cylinder id="zwarte-knoflook-gesneden-pointer" position="-0.14596024887800607 1.0514976180593443 -0.780387886253811" scale="-0.03 -0.03 0.04" material="color:#000000" geometry="" rotation="0 -0.11 0" visible="false"></a-cylinder>
+
+		<a-cylinder id="zwarte-knoflook-gesneden" color="red" position="1.359 1.095 0.6442853922670433" scale="-0.03 -0.03 0.04" material="color:#000000" geometry="" rotation="0 -0.11 0" visible="false"></a-cylinder>
+
+		<a-entity id="knife-pointer" obj-model="obj:/models/knife/KitchenKnife.obj;mtl:/models/knife/KitchenKnife.mtl" position="1.098 1.021 1.0038065023123086" rotation="90 0 0" scale="0.002 0.002 0.002" visible="false"></a-entity>
+		<a-cylinder id="onionsliced-pointer" color="#B22222" position="0.57 1.09 -0.8" scale="0.08000000000000003 2.7755575615628914e-17 0.05999999999999998" visible="false" material="" geometry="" ></a-cylinder>
+
+		<!-- OBJECTS -->
+		<a-entity id="knife" obj-model="obj:/models/knife/KitchenKnife.obj;mtl:/models/knife/KitchenKnife.mtl" position="1.0976514964491397 1.0212743829081077 0.9902600738752071" rotation="90 0 0" scale="0.0015 0.0015 0.0015"></a-entity>
+        <a-box id="cuttingboard" position="1.521701885593924 1.0181730500475341 0.6249955765207746" scale="1 0.13 1" material="" geometry=""></a-box>
+		<a-entity id="fryingpan" obj-model="obj:/models/fryingpan/model.obj;mtl:/models/fryingpan/materials.mtl" position="1.604 1.0596863992758818 -0.5826908847176837" rotation="0 90 0" scale="0.18 0.2 0.15"></a-entity>
+        <a-box id="counter" src="/images/longtiles.jpg" position="1.5068829358785465 0.3933016091057957 -0.10736847350053913" scale="1.05 1.17 2.71" material="" geometry=""></a-box>
+        <a-entity id="garden" obj-model="obj:/models/garden/model.obj;mtl:/models/garden/materials.mtl" position="0.30964602386539175 0.32679508748201 -4.27091592380234" scale="3.3899999999999997 3.59 3.5"></a-entity>
+        <a-entity id="stove" obj-model="obj: #stove-obj; mtl: #stove-mtl" position="0 0 -1"></a-entity>
+        <a-entity id="stove-fire" obj-model="obj:/models/fire/PUSHILIN_campfire.obj;mtl:/models/fire/PUSHILIN_campfire.mtl" position="0.5695651949223057 1.0008034846555298 -0.7867827884909742" scale="0.14999999999999994 0.10999999999999997 0.11999999999999995" visible="false"></a-entity>
+
+        <!-- javascript button objects -->
+        <a-cylinder id="js--stove-button" color="crimson" height="3" radius="1.5" position="0.606 0.8713705211864609 -0.64961076314846" rotation="90 0 -2.12" scale="-0.02 -0.07 0.02" material="" geometry=""></a-cylinder>
+        <a-box id="js--walkbox-grill" color="crimson" position="-0.4918352537421866 -0.4762628923443797 0" material="" geometry=""></a-box>
+        <a-box id="js--walkbox-stove" color="crimson" position="0.6012805134413488 -0.4762628923443797 0" material="" geometry=""></a-box>
+
+
+    </a-scene>
+  </body>
+</html>

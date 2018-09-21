@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: 
+Disallow: /images/Contact-info.PNG
 
 Sitemap: http://joshuavtk.me/sitemap.xml
